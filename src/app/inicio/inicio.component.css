@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+.bg-azulclaro{
+    background-color: #E1EBFA;
+}
+
+img {
+    width: 200px;
+}
+
+.resumo {
+    font-family: Poppins;
+    color: #4E4E4E;
+}
+
+.entrar {
+    font-family: Montserrat;
+    color: #2B60E1;
+    border-color: #2B60E1;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.entrar:hover {
+    font-family: Montserrat;
+    color: white;
+    background-color: #0F0E0C;
+    border-color: #0F0E0C;
+    border-width: 2px;
+    border-style: solid;
+    transform: scale(0.8);
+    transition:all 0.3s ease;
+}
+
+
+.cadastrar {
+    font-family: Montserrat;
+    color: white;
+    background-color: #2B60E1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cadastrar:hover {
+    font-family: Montserrat;
+    background-color: #0F0E0C;
+    transform: scale(0.8);
+    transition:all 0.3s ease;
+}
