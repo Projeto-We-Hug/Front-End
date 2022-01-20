@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap%27'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap%27');
+
+.bgWeHug {
+    background-color: #2B60E1  !important;
+    padding: 120px 200px;
+}
+
+.textMenu {
+    font-family: Poppins, sans-serif;
+    color: #4E4E4E
+}
+
+.imgLogin {
+    width: 400px;
+    height: 350px;
+    align-items: center;
+}
+
+.arredoLogin {
+    border: 1px solid  #EDF3FA;
+    border-radius: 10px ;
+}
+
+.bgLeft {
+    background-color:  #EDF3FA;
+    border: 1px solid  #EDF3FA;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+    padding: 90px 60px !important;
+}
+
+.bgRight {
+    background-color: #FFFFFF;
+    border: 1px solid  #FFFFFF;
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    padding: 90px 60px !important;
+    font-family: Poppins, sans-serif;
+}
+
+.weHugText {
+    font-family: Montserrat;
+    font-weight: Bold;
+    color: #2B60E1;
+    font-size: 20pt;
+}
+span.weHugText {
+    color: #0F0E0C !important;
+}
+
+h2 {
+    font-family: Poppins, sans-serif;
+    color: #929292;
+    font-size: 14pt;
+}
+
+h1 {
+    font-family: Poppins, sans-serif;
+}
+
+.formText {
+    padding-bottom: 10px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    
+}
