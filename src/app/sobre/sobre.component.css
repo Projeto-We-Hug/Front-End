@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+.bg1{
+    background: #2B60E1
+    ;
+}
+
+.bg2{
+    background: #E1EBFA;
+}
+
+.bg3{
+    background: #B1C9EB;
+}
+
+.bg4{
+    background: #2B60E1;
+}
+
+.bg5{
+    background: #DBDBDB;
+}
+
+.titulo{
+    color: #202225;
+    font-family: Montserrat;
+}
+
+.texto{
+    color: #4E4E4E;
+    font-family: poppins;
+}
