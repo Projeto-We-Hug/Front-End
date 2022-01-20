@@ -1,2 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
+.text-preto {
+    color: #0F0E0C;
+    font-family: Montserrat;
+}
+
+.botao {
+    background-color: white;
+    border-color: #0F0E0C;
+    border-width: 2px;
+    border-style: solid
+}
+
+.botao:hover {
+    background-color: #0F0E0C;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(0.8);
+    transition:all 0.3s ease;
+    
+}
+
+.entrar:hover{
+    transform: scale(0.8);
+    color: #2d60e1;
+    transition:all 0.3s ease;
+}
+
+.we {
+    font-family: Montserrat;
+    color: #2d60e1;
+    font-weight: bold
+}
+
+.hug {
+    font-family: Montserrat;
+    color: #0F0E0C;
+    font-weight: bold
+}
+
+.ms {
+    font-family: Montserrat;
+}
+
+.pp {
+    font-family: Poppins;
+}
 
