@@ -18,12 +18,14 @@
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transform: scale(0.8);
+    transition:all 0.3s ease;
     
 }
 
 .entrar:hover{
     transform: scale(0.8);
     color: #2d60e1;
+    transition:all 0.3s ease;
 }
 
 .we {
