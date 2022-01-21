@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+
+h2{
+    color: #0F0E0C;
+    font-family: Poppins;
+}
+
 .bg-pagina{
     background-color: #2B60E1 !important;
     padding: 100px 200px;
@@ -6,4 +15,25 @@
     background-color: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 10px;
+}
+
+.btn {
+    border-color: #0F0E0C;
+    border-width: 2px;
+    border-style: solid
+}
+
+.btn:hover {
+    transform: scale(0.8);
+    transition:all 0.3s ease;
+}
+
+.cadastrar {
+    background: #0F0E0C;
+    color: white;
+}
+
+.texto {
+    color: #0F0E0C;
+    font-family: Montserrat;
 }
