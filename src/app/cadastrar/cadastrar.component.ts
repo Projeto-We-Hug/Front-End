@@ -6,13 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastrar.component.css']
 })
 export class CadastrarComponent implements OnInit {
-  usuarios: Usuarios = new Usuarios
-
 
   constructor() { }
 
-  ngOnInit() {
-    window.scroll(0,0)
+  ngOnInit(): void {
   }
 
 }
