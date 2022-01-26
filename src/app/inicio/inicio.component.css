@@ -2,12 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
 .bg-azulclaro{
-    background: rgb(225,235,250);
-    background: linear-gradient(180deg, rgba(225,235,250,1) 39%, rgba(249,249,249,1) 100%);
+    background-color: #E1EBFA;
 }
 
 img {
-    width: 350px;
+    width: 200px;
 }
 
 .resumo {
