@@ -5,27 +5,27 @@
 
                         <div class="form-group">
                         <label for="">Nome</label>
-                        <input type="text" class="form-control">
+                        <input [(ngModel)]="usuarios.nome" name="nome" placeholder="Nome" type="text" class="form-control">
                         </div>
 
                         <div class="form-group">
                             <label for="">Usuário</label>
-                            <input type="text" class="form-control">
+                            <input [(ngModel)]="usuarios.usuario" name="usuario" placeholder="e-mail" type="text" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label for="">Senha</label>
-                                <input type="password" class="form-control">
+                                <input (input)="confirmSenha($event)" name="senha" type="password" class="form-control">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Confirmar senha</label>
-                                    <input type="password" class="form-control">
+                                    <input [(ngModel)]="usuarios.senha" name="confirmarSenha" type="password" class="form-control">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="">Link da Foto</label>
-                                        <input type="text" class="form-control">
+                                        <input [(ngModel)]="usuarios.foto" name="foto" type="text" class="form-control">
                                         </div>
 
                             <div class="d-flex justify-content-around">
