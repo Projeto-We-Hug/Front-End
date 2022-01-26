@@ -7,14 +7,15 @@
     padding: 120px 200px;
 }
 
-
-.imagem {
-    transform: scale(0.7);
-}
-
 .textMenu {
     font-family: Poppins, sans-serif;
     color: #4E4E4E
+}
+
+.imgLogin {
+    width: 400px;
+    height: 350px;
+    align-items: center;
 }
 
 .arredoLogin {
@@ -49,13 +50,13 @@ span.weHugText {
     color: #0F0E0C !important;
 }
 
-h3 {
+h2 {
     font-family: Poppins, sans-serif;
     color: #929292;
     font-size: 14pt;
 }
 
-h2 {
+h1 {
     font-family: Poppins, sans-serif;
 }
 
@@ -67,9 +68,4 @@ h2 {
     background-color: black;
     color: white;
     
-}
-
-.btn:hover{
-    transform: scale(0.8);
-    transition:all 0.3s ease;
 }

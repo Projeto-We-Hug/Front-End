@@ -1,51 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
-h2 {
-    font-size: 1.5rem;
-    font-family: Montserrat;
-    color: 
-    black;
+.bg1{
+    background: #2B60E1
+    ;
 }
 
-h4 {
-    font-size: 1rem;
-    font-family: Poppins;
-    font-weight: bold;
+.bg2{
+    background: #E1EBFA;
 }
 
-.pts {
-    font-size: 3rem;
-    color: #2B60E1
+.bg3{
+    background: #B1C9EB;
 }
 
-.pcard {
-    font-family: montserrat;
-    font-size: 0.8rem;
+.bg4{
+    background: #2B60E1;
 }
 
-.pgrande {
-    color: #4E4E4E;
-    font-family: Poppins;
-}
-
-legend {
-    color: #929292;
-    font-family: Poppins;
-    font-size: 1rem;
-    letter-spacing: 3px;
-}
-
-.pequeno {
-    font-size: 0.8rem;
-}
-
-.bg-branco{
-    background: #F9F9F9;
-}
-
-.bg-azul {
-    background-color: #2B60E1;
+.bg5{
+    background: #DBDBDB;
 }
 
 .titulo{
@@ -54,52 +28,6 @@ legend {
 }
 
 .texto{
-    color: white;
+    color: #4E4E4E;
     font-family: poppins;
-}
-
-.card{
-    border: none;
-}
-
-.circle {
-    height: 2.5rem;
-    width: 2.5rem;
-}
-
-img {
-    border-radius: 100%;
-}
-
-.fa {
-    font-size: 1.5rem;
-    color: #2B60E1
-}
-
-.fa:hover {
-    color: #202225
-}
-
-#mayq:hover {
-    content: url("https://i.imgur.com/vEdREk2.jpg");
-}
-
-#mari:hover {
-    content: url("https://i.imgur.com/3pNC0P0.png");
-}
-
-#gui:hover {
-    content: url("https://i.imgur.com/1Ahl75W.png");
-}
-
-#gabe:hover {
-    content: url("https://i.imgur.com/nLdK4cg.png");
-}
-
-#rafa:hover {
-    content: url("https://i.imgur.com/YcUvarw.png");
-}
-
-#samuel:hover {
-    content: url("https://i.imgur.com/V1R0uah.png");
 }
