@@ -1,12 +1,12 @@
-import { Temas } from './Temas';
-import { Usuarios } from './Usuarios';
+import { Tema, } from './Tema';
+import { Usuario } from './Usuario';
 
-export class Postagens{
+export class Postagem{
     public id: number
     public descricao: string
     public midia: string
     public publicacaoAtiva: boolean
     public data: Date
-    public usuario: Usuarios
-    public tema: Temas
+    public usuario: Usuario
+    public tema: Tema
 }

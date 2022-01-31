@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { UsuarioLogin } from '../model/UsuarioLogin';
-import { Usuarios } from '../model/Usuarios';
+import { Usuario } from '../model/Usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -29,8 +29,8 @@ export class AuthService {
     return this.http.post<UsuarioLogin>('https://wehug.herokuapp.com/usuarios/logar', usuarioLogin);
   }
 
-  cadastrar(usuarios: Usuarios):Observable<Usuarios> {
-    return this.http.post<Usuarios>('https://wehug.herokuapp.com/usuarios/cadastrar', usuarios);
+  cadastrar(usuarios: Usuario):Observable<Usuario> {
+    return this.http.post<Usuario>('https://wehug.herokuapp.com/usuarios/cadastrar', usuarios);
 
   }
   
