@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuarios } from '../model/Usuarios';
+import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastrarComponent implements OnInit {
 
-  usuarios: Usuarios = new Usuarios
+  usuarios: Usuario = new Usuario
 
   confirmarSenha: string
   tipoUsuarios: string
@@ -42,7 +42,7 @@ export class CadastrarComponent implements OnInit {
       alert('As senhas estão Diferentes')
     } 
     else{
-      this.authService.cadastrar(this.usuarios).subscribe((resp: Usuarios) => {
+      this.authService.cadastrar(this.usuarios).subscribe((resp: Usuario) => {
         this.usuarios = resp
         this.router.navigate(['/entrar'])
         alert('Usuario Cadastrado com sucesso!')

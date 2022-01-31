@@ -1,9 +1,9 @@
-import { Postagens } from "./Postagem"
+import { Postagem } from "./Postagem"
 
-export class Temas{
+export class Tema{
     public id: number
     public topicoPrincipal: string
     public subTopicos: string
     public descricao: string
-    public postagem: Postagens[]
+    public postagem: Postagem[]
 }

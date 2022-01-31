@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { Temas } from '../model/Temas';
+import { Postagem } from '../model/Postagem';
+import { Tema } from '../model/Tema';
+import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
+import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
 @Component({
@@ -12,14 +15,21 @@ import { TemaService } from '../service/tema.service';
 })
 export class FeedComponent implements OnInit {
 
-  tema: Temas = new Temas()
-  listaTemas: Temas[]
+  postagem: Postagem = new Postagem()
+
+  tema: Tema = new Tema()
+  listaTemas: Tema[]
   idTema: number
+  ativo = false
+
+  usuario: Usuario = new Usuario
+  idUsuario = environment.id
 
   constructor(
     private router: Router,
     private temaService: TemaService,
-    private authService: AuthService
+    private authService: AuthService,
+    private postagemService: PostagemService
     
   ) { }
 
@@ -35,9 +45,27 @@ export class FeedComponent implements OnInit {
   }
 
   getAllTemas(){
-    this.temaService.getAllTemas().subscribe((resp: Temas[]) => {
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
   }
 
+  findByIdTema(){
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
+      this.tema = resp
+    })
+  }
+
+  publicar(){
+    this.tema.id = this.idTema
+    this.postagem.tema = this.tema
+
+    this.usuario.id = this.idUsuario
+    this.postagem.usuario = this.usuario
+
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
+      this.postagem = resp
+      alert('Postagem realizada com sucesso!')
+    })
+  }
 }
