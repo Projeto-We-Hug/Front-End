@@ -25,8 +25,15 @@ export class TemasComponent implements OnInit {
         if (environment.token == '') {
           this.router.navigate(['/entrar'])
         } 
+        this.findAllTemas()
 
-}
+      }
+    
+  findAllTemas(){
+      this.temaService.getAllTemas().subscribe((resp: Temas[])=> {
+      this.listaTemas = resp
+      })
+    }
 
   cadastrar(){
     this.temaService.postTema(this.temas).subscribe((resp: Temas)=>{
