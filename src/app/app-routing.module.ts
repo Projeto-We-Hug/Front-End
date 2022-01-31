@@ -5,6 +5,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { FeedComponent } from './feed/feed.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { TemasComponent } from './temas/temas.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'sobre', component: SobreComponent},
   {path: 'entrar', component: EntrarComponent},
   {path: 'cadastro', component: CadastrarComponent},
-  {path: 'feed', component: FeedComponent}
+  {path: 'feed', component: FeedComponent},
+  {path: 'temas', component: TemasComponent},
 
 ];
 
