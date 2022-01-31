@@ -16,6 +16,7 @@ import { TemaService } from '../service/tema.service';
 export class FeedComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
+  listaPostagens: Postagem[]
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
@@ -24,6 +25,7 @@ export class FeedComponent implements OnInit {
 
   usuario: Usuario = new Usuario
   idUsuario = environment.id
+  
 
   constructor(
     private router: Router,
@@ -42,6 +44,7 @@ export class FeedComponent implements OnInit {
     }
     this.authService.refreshToken()
     this.getAllTemas()
+    this.getAllPostagens()
   }
 
   getAllTemas(){
@@ -55,6 +58,18 @@ export class FeedComponent implements OnInit {
       this.tema = resp
     })
   }
+
+  getAllPostagens(){
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) =>{
+    this.listaPostagens = resp
+    })
+    }
+
+  findByIdUser(){
+    this.authService.getByIdUser(this.idUsuario).subscribe((resp: Usuario) => {
+    this.usuario = resp
+    })
+    }
 
   publicar(){
     this.tema.id = this.idTema
