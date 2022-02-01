@@ -84,6 +84,10 @@
                   <small>{{item.tema.descricao}}</small>
                   <p>{{item.descricao}}</p>
                   <img src="{{item.midia}}" alt="" class="img-fluid">
+
+                  <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                  <a [routerLink]="['/delete-postagem', item.id]" class="text-danger mr-3" href="">Apagar</a>
+    
                   
                 </div>
               </div>
@@ -112,6 +116,7 @@
                   <small>{{tema.descricao}}</small>
                   <p>{{item.descricao}}</p>
                   <img src="{{item.midia}}" alt="" class="img-fluid">
+                  
                   
                 </div>
               </div>
