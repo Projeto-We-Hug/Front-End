@@ -36,7 +36,6 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     window.scroll (0,0)
 
     if(environment.token == ''){
@@ -83,6 +82,7 @@ export class FeedComponent implements OnInit {
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
+      
     })
   }
 }
