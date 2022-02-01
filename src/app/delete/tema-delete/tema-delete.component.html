@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secondary">Apagar tema.</h1>
+
+        </div>
+
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <h4 class="text-center text-secondary">Você deseja realmente deletar este tema? Todas as postagens serão deletadas.</h4>
+
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h5 class="text-center text-primary">Tema: {{tema.descricao}}</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button class="btn btn-danger mr-5" routerLink="/temas">Cancelar a ação!</button>
+            <button class="btn btn-danger" (click)="apagar()">Sim!</button>
+
+        </div>
+
+    </div>
+
+</div>

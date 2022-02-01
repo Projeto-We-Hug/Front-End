@@ -8,11 +8,10 @@ import { Tema } from '../model/Tema';
   providedIn: 'root'
 })
 export class TemaService {
-  
 
   constructor(
     private http: HttpClient
-  ) { }
+    ) { }
 
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
@@ -32,9 +31,17 @@ export class TemaService {
     return this.http.get<Tema>(`https://wehug.herokuapp.com/temas/${id}`, this.token)
     }
 
-
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('https://wehug.herokuapp.com/temas', tema, this.token)
   }
+
+  putTema(tema: Tema): Observable<Tema>{
+    return this.http.put<Tema>('https://wehug.herokuapp.com/temas', tema, this.token)
+  }
+
+  deleteTema(id: number){
+    return this.http.delete(`https://wehug.herokuapp.com/temas/${id}`, this.token) 
+  }
   
+
 }
