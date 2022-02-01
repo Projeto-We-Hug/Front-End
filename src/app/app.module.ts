@@ -17,6 +17,8 @@ import { FeedComponent } from './feed/feed.component';
 import { MenulogadoComponent } from './menulogado/menulogado.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { DeletePostagemComponent } from './delete/delete-postagem/delete-postagem.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent} from './delete/tema-delete/tema-delete.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { DeletePostagemComponent } from './delete/delete-postagem/delete-postage
     FeedComponent,
     MenulogadoComponent,
     PostagemEditComponent,
-    DeletePostagemComponent
+    DeletePostagemComponent,
+    TemaEditComponent,
+    TemaDeleteComponent
   ],
   imports: [
     BrowserModule,

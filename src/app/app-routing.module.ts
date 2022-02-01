@@ -8,6 +8,8 @@ import { FeedComponent } from './feed/feed.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { TemasComponent } from './temas/temas.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path: 'temas', component: TemasComponent},
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'delete-postagem/:id', component: DeletePostagemComponent},
+  {path: 'tema-edit/:id', component: TemaEditComponent},
+  {path: 'tema-delete/:id', component: TemaDeleteComponent}
 ];
 
 @NgModule({
