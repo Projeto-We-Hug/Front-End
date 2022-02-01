@@ -1,3 +1,5 @@
+import { DeletePostagemComponent } from './delete/delete-postagem/delete-postagem.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
@@ -15,7 +17,8 @@ const routes: Routes = [
   {path: 'cadastro', component: CadastrarComponent},
   {path: 'feed', component: FeedComponent},
   {path: 'temas', component: TemasComponent},
-
+  {path: 'postagem-edit/:id', component: PostagemEditComponent},
+  {path: 'delete-postagem/:id', component: DeletePostagemComponent},
 ];
 
 @NgModule({
