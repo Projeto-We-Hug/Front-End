@@ -1,0 +1,98 @@
+.bg-azul{
+    background: rgb(225,235,250);
+    background: linear-gradient(180deg, rgba(225,235,250,1) 16%, rgba(249,249,249,1) 100%);
+}
+
+.nova{
+    background-color: #2B60E1;
+    border-style: none;
+    color: white;
+    border-radius: 2px;
+}
+
+.nova:hover{
+    background-color: #7193e9;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.ver{
+    background-color: #D3DEEF;
+    border-style: none;
+    color: #0838AE;
+    border-radius: 2px;
+}
+
+.ver:hover{
+    background-color: #bccde7;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.fa{
+    font-size: 1rem;
+}
+
+h1{
+    font-size: 1.5rem;
+    color: #202225;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 1.2rem;
+    color: #202225;
+    font-family: Montserrat;
+}
+
+h5{
+    font-size: 1rem;
+    color: #0F0E0C;
+    font-family: Montserrat;
+}
+
+label{
+    font-family: Montserrat;
+    color: #0F0E0C;
+}
+
+a{
+    text-decoration: none;
+}
+
+.menupostagens{
+    color: #0F0E0C;
+    font-family: Montserrat;
+    font-size: 1rem;
+}
+
+.menupostagens:hover{
+    color: #535353;
+}
+
+small{
+    color: #929292;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: Poppins;
+}
+
+p{
+    font-family: Poppins;
+    color: #535353;
+    font-size: 0.8rem;
+}
+
+.cancelar{
+    background-color: transparent;
+    color: #C31414;
+    border-style: solid;
+    border-color: #C31414;
+    border-radius: 2px;
+}
+
+.publicar{
+    background-color: #2B60E1;
+    color: white;
+    border-color: #2B60E1;
+    border-radius: 2px;
+}

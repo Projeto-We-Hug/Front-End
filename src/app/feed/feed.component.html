@@ -1,48 +1,32 @@
-<div class="container-fluid">
+<div class="container-fluid bg-azul mt-0">
 
-  <div class="row bgTudo">
-    <div class="col-md-6">
+  <div class="container mt-0">
+      
 
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-6 text-white mt-5">
-          <h1 class="text-dark">Seja Bem-vindo(a), !</h1>
-          <h5 class="text-dark">Expresse aqui os seus pensamentos e opiniões!</h5>
-        </div>
+    <h1 class="pt-5 pb-5">Publicações</h1>
+
+
+      <div class="row mb-5 justify-content-start">
+          <a class="nova px-5 py-2 mr-2" data-toggle="modal" data-target="#novaPostagem" routerLink="#novaPostagem"><i class="fa fa-plus" aria-hidden="true"></i> Nova postagem</a>
+          <a routerLink="#postagens" class="ver px-5 py-2 ml-2">Ver postagens</a>
       </div>
 
-      <div class="row d-flex justify-content-center mt-3 mb-5">
-        <div class="col-md-6">
-          <button class="btn btn-dark mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
-          <a href="#postagens" class="btn btn-success btn-outline-light">Ver Postagens</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="col-md-6 d-flex justify-content-center">
-      <img src="https://i.imgur.com/waygN75.png" alt="" width="500px" height="500px">
-
-    </div>
 
 
-
-
-
-
-    <div class="mt-5 pt-5 mx-5" id="postagens">
-      <nav class="d-flex justify-content-end">
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <div class="mt-5 pt-5" id="postagens">
+      <nav class="d-flex justify-content-start">
+        <div class="nav nav-tabs mb-5" id="nav-tab" role="tablist">
           
-            <a (click)='getAllPostagens()' class="nav-item nav-link active" id="nav-todasPostagens-tab" data-toggle="tab"
+            <a (click)='getAllPostagens()' class="pr-5 menupostagens" id="nav-todasPostagens-tab" data-toggle="tab"
             href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens
             </a>
           
-            <a (click)='findByIdUser()' class="nav-item nav-link" id="nav-minhasPostagens-tab" data-toggle="tab"
+            <a (click)='findByIdUser()' class="pr-5 menupostagens" id="nav-minhasPostagens-tab" data-toggle="tab"
             href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
             postagens
             </a>
           
-            <a class="nav-item nav-link" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab"
+            <a class="pr-5 menupostagens" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab"
             aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema
             </a>
     
@@ -54,61 +38,89 @@
           <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab">
     
-            <div class="card-columns">
-              <div class="card text-center" *ngFor='let item of listaPostagens'>
-                <div class="card-body">
+            <div class="container col-md-9">
+            <div class="d-flex justify-content-center bg-white">
+              <div class="my-3" *ngFor='let item of listaPostagens'>
+                <div>
+                  <div class="row">
+                  <div>
                   <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px">
-                  <small class="text-muted">Tema: {{item.tema.descricao}}</small>
-                  <h5 class="card-title">{{item.descricao}}</h5>
+                  </div>
+                  <div class="ml-3 mb-2">
+                  <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
+                  <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
+                    'HH:mm'}}</small>
+                  </div>
+                  </div>
+                  <small>{{item.tema.descricao}}</small>
+                  <p>{{item.descricao}}</p>
                   <img src="{{item.midia}}" alt="" class="img-fluid">
-                  <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
-                      'HH:mm'}}</small></p>
-                  <p class="card-text"><small class="text-muted">Autor: {{item.usuario.nome}}</small></p>
-    
+                  
                 </div>
               </div>
             </div>
+          </div>
+
           </div>
     
     
     
           <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-    
-            <div class="card-columns">
-              <div class="card text-center" *ngFor='let item of usuario.postagem'>
-                <div class="card-body">
-                  <small class="text-muted">Tema: {{item.tema.descricao}}</small>
-                  <h5 class="card-title">{{item.descricao}}</h5>
+                    
+          <div class="container col-md-9">
+            <div class="d-flex justify-content-center bg-white">
+              <div class="my-3" *ngFor='let item of usuario.postagem'>
+                <div>
+                  <div class="row">
+                  <div>
+                  <img class="rounded-circle" src="{{usuario.foto}}" alt="" width="50px">
+                  </div>
+                  <div class="ml-3 mb-2">
+                  <h4 class="pb-0 mb-0">{{usuario.nome}}</h4>
+                  <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
+                    'HH:mm'}}</small>
+                  </div>
+                  </div>
+                  <small>{{item.tema.descricao}}</small>
+                  <p>{{item.descricao}}</p>
                   <img src="{{item.midia}}" alt="" class="img-fluid">
-                  <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
-                      'HH:mm'}}</small></p>
-    
+                  
                 </div>
               </div>
             </div>
           </div>
-          
-    
+
+          </div>
     
     
           <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
     
-            <div class="card-columns" *ngFor='let tema of listaTemas'>
-              <div class="card text-center" *ngFor='let item of tema.postagem'>
-                <div class="card-body">
-                  <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="25px">
-                  <small class="text-muted">Tema: {{item.tema.descricao}}</small>
-                  <h5 class="card-title">{{item.descricao}}</h5>
+          <div class="container col-md-9">
+            <div class="d-flex justify-content-center bg-white" *ngFor='let tema of listaTemas'>
+              <div class="my-3" *ngFor='let item of tema.postagem'>
+                <div>
+                  <div class="row">
+                  <div>
+                  <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px">
+                  </div>
+                  <div class="ml-3 mb-2">
+                  <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
+                  <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
+                    'HH:mm'}}</small>
+                  </div>
+                  </div>
+                  <small>{{item.tema.descricao}}</small>
+                  <p>{{item.descricao}}</p>
                   <img src="{{item.midia}}" alt="" class="img-fluid">
-                  <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
-                      'HH:mm'}}</small>
-    
+                  
                 </div>
               </div>
-            </div> 
-    
-    
+            </div>
           </div>
+
+          </div>
+
+
     
         </div>
       </div>
@@ -154,18 +166,18 @@
       </div>
       <div class="modal-body">
 
-        <div class="form-group">
+        <div class="form-group mt-2">
           <label for="descricao">Descrição</label>
           <input [(ngModel)]='postagem.descricao' type="text" class="form-control" id="descricao"
             placeholder="Descrição">
         </div>
 
-        <div class="form-group">
+        <div class="form-group mt-2">
           <label for="titulo">Link da imagem</label>
           <input [(ngModel)]='postagem.midia' type="text" class="form-control" id="linkFoto" placeholder="Link da foto">
         </div>
 
-        <div class="form-check mt-4 mb-3">
+        <div class="form-check mt-5 mb-3">
           <input [(ngModel)]='postagem.publicacaoAtiva' class="form-check-input" type="checkbox" value=""
             id="defaultCheck1">
           <label class="form-check-label" for="defaultCheck1">
@@ -173,7 +185,7 @@
           </label>
         </div>
 
-        <div class="form-group">
+        <div class="form-group mt-2">
           <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/temas" href=""> cadastre um
               novo</a>: </label>
           <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
@@ -182,9 +194,9 @@
         </div>
       </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger mb-2" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
+      <div class="modal-footer mt-2">
+        <button type="button" class="cancelar px-5 py-2" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="publicar px-5 py-2" (click)='publicar()'>Publicar</button>
       </div>
     </div>
   </div>
