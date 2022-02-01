@@ -15,6 +15,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { TemasComponent } from './temas/temas.component';
 import { FeedComponent } from './feed/feed.component';
 import { MenulogadoComponent } from './menulogado/menulogado.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { DeletePostagemComponent } from './delete/delete-postagem/delete-postagem.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MenulogadoComponent } from './menulogado/menulogado.component';
     InicioComponent,
     TemasComponent,
     FeedComponent,
-    MenulogadoComponent
+    MenulogadoComponent,
+    PostagemEditComponent,
+    DeletePostagemComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,11 @@ import { MenulogadoComponent } from './menulogado/menulogado.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy,
+    }],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

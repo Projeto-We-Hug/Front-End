@@ -17,13 +17,19 @@ export class TemaService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
+  refreshToken() {
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   getAllTemas(): Observable<Tema[]>{
     return this.http.get<Tema[]>('https://wehug.herokuapp.com/temas', this.token)
   }
 
-  getByIdTema(id: number): Observable<Tema>{
+  getByIdTema(id: number):Observable<Tema>{
     return this.http.get<Tema>(`https://wehug.herokuapp.com/temas/${id}`, this.token)
-  }
+    }
 
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('https://wehug.herokuapp.com/temas', tema, this.token)

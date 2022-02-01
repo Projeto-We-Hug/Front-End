@@ -7,8 +7,8 @@
 
 
       <div class="row mb-5 justify-content-start">
-          <a class="nova px-5 py-2 mr-2" data-toggle="modal" data-target="#novaPostagem" routerLink="#novaPostagem"><i class="fa fa-plus" aria-hidden="true"></i> Nova postagem</a>
-          <a routerLink="#postagens" class="ver px-5 py-2 ml-2">Ver postagens</a>
+          <a class="nova px-5 py-2 mr-2" data-toggle="modal" data-target="#novaPostagem"><i class="fa fa-plus" aria-hidden="true"></i> Nova postagem</a>
+          <a href="#postagens" class="ver px-5 py-2 ml-2">Ver postagens</a>
       </div>
 
 
@@ -84,6 +84,10 @@
                   <small>{{item.tema.descricao}}</small>
                   <p>{{item.descricao}}</p>
                   <img src="{{item.midia}}" alt="" class="img-fluid">
+
+                  <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                  <a [routerLink]="['/delete-postagem', item.id]" class="text-danger mr-3" href="">Apagar</a>
+    
                   
                 </div>
               </div>
@@ -109,9 +113,10 @@
                     'HH:mm'}}</small>
                   </div>
                   </div>
-                  <small>{{item.tema.descricao}}</small>
+                  <small>{{tema.descricao}}</small>
                   <p>{{item.descricao}}</p>
                   <img src="{{item.midia}}" alt="" class="img-fluid">
+                  
                   
                 </div>
               </div>
