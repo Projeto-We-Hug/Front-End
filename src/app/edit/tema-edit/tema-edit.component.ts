@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from 'src/app/model/Tema';
+import { AuthService } from 'src/app/service/auth.service';
 import { TemaService } from 'src/app/service/tema.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-tema-edit',
@@ -10,20 +12,23 @@ import { TemaService } from 'src/app/service/tema.service';
 })
 export class TemaEditComponent implements OnInit {
 
-  tema: Tema = new Tema
+  tema: Tema = new Tema();
 
   constructor(
     private temaService: TemaService,
     private router: Router,
+    private authService: AuthService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     window.scroll(0,0)
 
-    // if(environment.token == ''){
-    //   alert('Sua Sessão expirou, faça login novamente')
-    //   this.router.navigate(['/login'])
+    if(environment.token == ''){
+      this.router.navigate(['/entrar'])
+    }
+    this.authService.refreshToken()
+    
 
   let id = this.route.snapshot.params['id']
   this.findByIDTema(id)

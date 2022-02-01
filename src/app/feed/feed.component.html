@@ -1,208 +1,199 @@
 <div class="container-fluid bg-azul mt-0">
 
   <div class="container mt-0">
-      
 
+<!-- H1 e botões de ver e fazer nova postagem -->
     <h1 class="pt-5 pb-5">Publicações</h1>
+    <div class="row mb-5 justify-content-start">
+      <a class="nova px-5 py-2 mr-2" data-toggle="modal" data-target="#novaPostagem"><i class="fa fa-plus"
+          aria-hidden="true"></i> Nova postagem</a>
+      <a href="#postagens" class="ver px-5 py-2 ml-2">Ver postagens</a>
+    </div>
+<!-- Fim do H1 e botões de ver e fazer nova postagem -->
 
 
-      <div class="row mb-5 justify-content-start">
-          <a class="nova px-5 py-2 mr-2" data-toggle="modal" data-target="#novaPostagem"><i class="fa fa-plus" aria-hidden="true"></i> Nova postagem</a>
-          <a href="#postagens" class="ver px-5 py-2 ml-2">Ver postagens</a>
-      </div>
-
-
-
+<!-- Barra de navegação de postagens -->
     <div class="mt-5 pt-5" id="postagens">
       <nav class="d-flex justify-content-start">
         <div class="nav nav-tabs mb-5" id="nav-tab" role="tablist">
-          
-            <a (click)='getAllPostagens()' class="pr-5 menupostagens" id="nav-todasPostagens-tab" data-toggle="tab"
+
+          <a (click)='getAllPostagens()' class="pr-5 menupostagens" id="nav-todasPostagens-tab" data-toggle="tab"
             href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens
-            </a>
-          
-            <a (click)='findByIdUser()' class="pr-5 menupostagens" id="nav-minhasPostagens-tab" data-toggle="tab"
+          </a>
+
+          <a (click)='findByIdUser()' class="pr-5 menupostagens" id="nav-minhasPostagens-tab" data-toggle="tab"
             href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
             postagens
-            </a>
-          
-            <a class="pr-5 menupostagens" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab"
+          </a>
+
+          <a class="pr-5 menupostagens" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab"
             aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema
-            </a>
-    
+          </a>
+
         </div>
       </nav>
-    
-      <div class="container">
+<!-- Fim da barra de navegação de postagens -->
+
+<div class="container col-md-8 pb-5">
+
+<!-- Todas as postagens -->
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab">
-    
-            <div class="container col-md-9">
-            <div class="d-flex justify-content-center bg-white">
-              <div class="my-3" *ngFor='let item of listaPostagens'>
-                <div>
-                  <div class="row">
-                  <div>
-                  <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px">
-                  </div>
-                  <div class="ml-3 mb-2">
+
+            <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card"
+              *ngFor='let item of listaPostagens'>
+              <div class="row">
+                <div><img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px"></div>
+                <div class="ml-3 mb-2">
                   <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
                   <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
                     'HH:mm'}}</small>
-                  </div>
-                  </div>
-                  <small>{{item.tema.descricao}}</small>
-                  <p>{{item.descricao}}</p>
-                  <img src="{{item.midia}}" alt="" class="img-fluid">
-                  
                 </div>
               </div>
+              <small class="mt-3">{{item.tema.descricao}}</small>
+              <p>{{item.descricao}}</p>
+              <img src="{{item.midia}}" alt="" class="img-fluid imagem">
             </div>
           </div>
+<!-- Fim de todas as postagens -->
 
-          </div>
-    
-    
-    
+
+<!-- Minhas postagens -->
           <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-                    
-          <div class="container col-md-9">
-            <div class="d-flex justify-content-center bg-white">
-              <div class="my-3" *ngFor='let item of usuario.postagem'>
-                <div>
-                  <div class="row">
-                  <div>
-                  <img class="rounded-circle" src="{{usuario.foto}}" alt="" width="50px">
-                  </div>
-                  <div class="ml-3 mb-2">
-                  <h4 class="pb-0 mb-0">{{usuario.nome}}</h4>
-                  <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
-                    'HH:mm'}}</small>
-                  </div>
-                  </div>
-                  <small>{{item.tema.descricao}}</small>
-                  <p>{{item.descricao}}</p>
-                  <img src="{{item.midia}}" alt="" class="img-fluid">
 
-                  <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                  <a [routerLink]="['/delete-postagem', item.id]" class="text-danger mr-3" href="">Apagar</a>
-    
-                  
+            <div>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="minhasPostagens" role="tabpanel"
+                  aria-labelledby="nav-todasPostagens-tab">
+
+                  <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card"
+                    *ngFor='let item of usuario.postagem'>
+                    <div class="row">
+                      <div><img class="rounded-circle" src={{usuario.foto}} alt="" width="50px"></div>
+                      <div class="ml-3 mb-2">
+                        <h4 class="pb-0 mb-0">{{usuario.nome}}</h4>
+                        <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
+                          'HH:mm'}}</small>
+                      </div>
+                    </div>
+                    <small class="mt-3">{{item.tema.descricao}}</small>
+                    <p>{{item.descricao}}</p>
+                    <img src="{{item.midia}}" alt="" class="img-fluid imagem">
+                    <div class="row">
+                      <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                      <a [routerLink]="['/delete-postagem', item.id]" class="text-danger mr-3" href="">Apagar</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+<!-- Fim de minhas postagens -->
 
-          </div>
-    
-    
+
+<!-- Postagens por tema -->
           <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
-    
-          <div class="container col-md-9">
-            <div class="d-flex justify-content-center bg-white" *ngFor='let tema of listaTemas'>
-              <div class="my-3" *ngFor='let item of tema.postagem'>
-                <div>
-                  <div class="row">
+            
+            
+              <div class="d-flex justify-content-center bg-white" *ngFor='let tema of listaTemas'>
+                <div class="my-3" *ngFor='let item of tema.postagem'>
                   <div>
-                  <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px">
+                    <div class="row">
+                    <div>
+                    <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px">
+                    </div>
+                    <div class="ml-3 mb-2">
+                    <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
+                    <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
+                      'HH:mm'}}</small>
+                    </div>
+                    </div>
+                    <small>{{tema.descricao}}</small>
+                    <p>{{item.descricao}}</p>
+                    <img src="{{item.midia}}" alt="" class="img-fluid">
+                    
+                    
                   </div>
-                  <div class="ml-3 mb-2">
-                  <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
-                  <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
-                    'HH:mm'}}</small>
-                  </div>
-                  </div>
-                  <small>{{tema.descricao}}</small>
-                  <p>{{item.descricao}}</p>
-                  <img src="{{item.midia}}" alt="" class="img-fluid">
-                  
-                  
                 </div>
               </div>
+            
+
+          </div>
+
+<!-- Fim de postagens por tema -->
+
+
+        </div>
+      </div>
+      </div>
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="bgModal modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="novaPostagemLabel">Nova Postagem</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group mt-2">
+              <label for="descricao">Descrição</label>
+              <input [(ngModel)]='postagem.descricao' type="text" class="form-control" id="descricao"
+                placeholder="Descrição">
+            </div>
+
+            <div class="form-group mt-2">
+              <label for="titulo">Link da imagem</label>
+              <input [(ngModel)]='postagem.midia' type="text" class="form-control" id="linkFoto"
+                placeholder="Link da foto">
+            </div>
+
+            <div class="form-check mt-5 mb-3">
+              <input [(ngModel)]='postagem.publicacaoAtiva' class="form-check-input" type="checkbox" value=""
+                id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Publicação Ativa
+              </label>
+            </div>
+
+            <div class="form-group mt-2">
+              <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/temas" href=""> cadastre um
+                  novo</a>: </label>
+              <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+              </select>
             </div>
           </div>
 
+          <div class="modal-footer mt-2">
+            <button type="button" class="cancelar px-5 py-2" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="publicar px-5 py-2" (click)='publicar()' data-dismiss="modal">Publicar</button>
           </div>
-
-
-    
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="bgModal modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="novaPostagemLabel">Nova Postagem</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <div class="form-group mt-2">
-          <label for="descricao">Descrição</label>
-          <input [(ngModel)]='postagem.descricao' type="text" class="form-control" id="descricao"
-            placeholder="Descrição">
-        </div>
-
-        <div class="form-group mt-2">
-          <label for="titulo">Link da imagem</label>
-          <input [(ngModel)]='postagem.midia' type="text" class="form-control" id="linkFoto" placeholder="Link da foto">
-        </div>
-
-        <div class="form-check mt-5 mb-3">
-          <input [(ngModel)]='postagem.publicacaoAtiva' class="form-check-input" type="checkbox" value=""
-            id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Publicação Ativa
-          </label>
-        </div>
-
-        <div class="form-group mt-2">
-          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/temas" href=""> cadastre um
-              novo</a>: </label>
-          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
-            <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="modal-footer mt-2">
-        <button type="button" class="cancelar px-5 py-2" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="publicar px-5 py-2" (click)='publicar()'>Publicar</button>
-      </div>
-    </div>
-  </div>
-</div>

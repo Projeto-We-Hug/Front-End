@@ -96,3 +96,12 @@ p{
     border-color: #2B60E1;
     border-radius: 2px;
 }
+
+.card{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.imagem{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
