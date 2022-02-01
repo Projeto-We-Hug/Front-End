@@ -14,6 +14,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { TemasComponent } from './temas/temas.component';
 import { FeedComponent } from './feed/feed.component';
+import { MenulogadoComponent } from './menulogado/menulogado.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FeedComponent } from './feed/feed.component';
     SobreComponent,
     InicioComponent,
     TemasComponent,
-    FeedComponent
+    FeedComponent,
+    MenulogadoComponent
   ],
   imports: [
     BrowserModule,

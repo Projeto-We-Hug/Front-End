@@ -10,7 +10,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastrarComponent implements OnInit {
 
-  usuarios: Usuario = new Usuario
+  usuario: Usuario = new Usuario
 
   confirmarSenha: string
   tipoUsuarios: string
@@ -33,17 +33,17 @@ export class CadastrarComponent implements OnInit {
   }
 
   cadastrar(){
-    this.usuarios.tipo = this.tipoUsuarios
+    this.usuario.tipo = this.tipoUsuarios
 
-    if(this.usuarios.senha != this.confirmarSenha){
-      console.log(this.usuarios.senha)
+    if(this.usuario.senha != this.confirmarSenha){
+      console.log(this.usuario.senha)
       console.log(this.confirmarSenha)
 
       alert('As senhas estão Diferentes')
     } 
     else{
-      this.authService.cadastrar(this.usuarios).subscribe((resp: Usuario) => {
-        this.usuarios = resp
+      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario = resp
         this.router.navigate(['/entrar'])
         alert('Usuario Cadastrado com sucesso!')
       })
