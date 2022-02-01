@@ -35,7 +35,11 @@ import { MenulogadoComponent } from './menulogado/menulogado.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy,
+    }],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
