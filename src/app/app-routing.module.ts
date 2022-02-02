@@ -10,11 +10,13 @@ import { SobreComponent } from './sobre/sobre.component';
 import { TemasComponent } from './temas/temas.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { SobrenosComponent } from './sobrenos/sobrenos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
   {path: 'inicio', component: InicioComponent},
   {path: 'sobre', component: SobreComponent},
+  {path: 'sobrenos', component: SobrenosComponent},
   {path: 'entrar', component: EntrarComponent},
   {path: 'cadastro', component: CadastrarComponent},
   {path: 'feed', component: FeedComponent},

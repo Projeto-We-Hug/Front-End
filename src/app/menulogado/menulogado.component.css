@@ -58,12 +58,18 @@
     border-radius: 100%;
 }
 
+.foto:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .fa{
     color: #0F0E0C;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .fa:hover{
     color:#2d60e1;
+    transform: scale(0.8);
+    transition:all 0.3s ease;
 }
 

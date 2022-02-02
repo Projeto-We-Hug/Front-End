@@ -14,22 +14,9 @@ h4 {
     font-weight: bold;
 }
 
-.bg-azul{
-    background-color: #2B60E1;
-}
-
-.links{
-    color:#4E4E4E;
-    text-decoration: none;
-}
-
-.links:hover{
-    color:#2B60E1;
-}
-
 .pts {
     font-size: 3rem;
-    color: #2B60E1;
+    color: #2B60E1
 }
 
 .pcard {
