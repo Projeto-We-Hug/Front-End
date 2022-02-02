@@ -1,7 +1,5 @@
 <div class="container-fluid bg-azul mt-0">
-
   <div class="container mt-0">
-
 <!-- H1 e botões de ver e fazer nova postagem -->
     <h1 class="pt-5 pb-5">Publicações</h1>
     <div class="row mb-5 justify-content-start">
@@ -11,36 +9,29 @@
     </div>
 <!-- Fim do H1 e botões de ver e fazer nova postagem -->
 
-
 <!-- Barra de navegação de postagens -->
     <div class="mt-5 pt-5" id="postagens">
       <nav class="d-flex justify-content-start">
         <div class="nav nav-tabs mb-5" id="nav-tab" role="tablist">
-
           <a (click)='getAllPostagens()' class="pr-5 menupostagens" id="nav-todasPostagens-tab" data-toggle="tab"
             href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens
           </a>
-
           <a (click)='findByIdUser()' class="pr-5 menupostagens" id="nav-minhasPostagens-tab" data-toggle="tab"
             href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
             postagens
           </a>
-
           <a class="pr-5 menupostagens" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab"
             aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema
           </a>
-
         </div>
       </nav>
 <!-- Fim da barra de navegação de postagens -->
 
 <div class="container col-md-8 pb-5">
-
 <!-- Todas as postagens -->
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab">
-
             <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card"
               *ngFor='let item of listaPostagens'>
               <div class="row">
@@ -61,12 +52,10 @@
 
 <!-- Minhas postagens -->
           <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-
             <div>
               <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="minhasPostagens" role="tabpanel"
                   aria-labelledby="nav-todasPostagens-tab">
-
                   <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card"
                     *ngFor='let item of usuario.postagem'>
                     <div class="row">
@@ -93,6 +82,7 @@
 
 
 <!-- Postagens por tema -->
+         
           <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
             
             
@@ -120,37 +110,14 @@
                   </div>
                 </div>
               </div>
-            
-
           </div>
-
 <!-- Fim de postagens por tema -->
-
 
         </div>
       </div>
       </div>
-
-
-
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Modal -->
     <div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -163,19 +130,16 @@
             </button>
           </div>
           <div class="modal-body">
-
             <div class="form-group mt-2">
               <label for="descricao">Descrição</label>
               <input [(ngModel)]='postagem.descricao' type="text" class="form-control" id="descricao"
                 placeholder="Descrição">
             </div>
-
             <div class="form-group mt-2">
               <label for="titulo">Link da imagem</label>
               <input [(ngModel)]='postagem.midia' type="text" class="form-control" id="linkFoto"
                 placeholder="Link da foto">
             </div>
-
             <div class="form-check mt-5 mb-3">
               <input [(ngModel)]='postagem.publicacaoAtiva' class="form-check-input" type="checkbox" value=""
                 id="defaultCheck1">
@@ -183,7 +147,6 @@
                 Publicação Ativa
               </label>
             </div>
-
             <div class="form-group mt-2">
               <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/temas" href=""> cadastre um
                   novo</a>: </label>
@@ -192,7 +155,6 @@
               </select>
             </div>
           </div>
-
           <div class="modal-footer mt-2">
             <button type="button" class="cancelar px-5 py-2" data-dismiss="modal">Cancelar</button>
             <button type="button" class="publicar px-5 py-2" (click)='publicar()' data-dismiss="modal">Publicar</button>
