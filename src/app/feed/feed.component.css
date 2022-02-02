@@ -105,3 +105,15 @@ p{
 .imagem{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+.editar{
+    border: none;
+    background-color: none;
+    color: #0F0E0C;
+}
+
+.apagar{
+    border: none;
+    background-color: none;
+    color: #C31414;
+}
