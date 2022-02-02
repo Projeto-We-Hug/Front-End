@@ -47,6 +47,7 @@ import { TemaDeleteComponent} from './delete/tema-delete/tema-delete.component';
     provide: LocationStrategy,
     useClass: HashLocationStrategy,
     }],
+    
   bootstrap: [AppComponent]
   
 })
