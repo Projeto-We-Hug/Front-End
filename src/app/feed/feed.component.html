@@ -42,7 +42,7 @@
                     'HH:mm'}}</small>
                 </div>
               </div>
-              <small class="mt-3">{{tema.descricao}}</small>
+              <!-- <small class="mt-3">{{item.tema.descricao}}</small> -->
               <p>{{item.descricao}}</p>
               <img src="{{item.midia}}" alt="" class="img-fluid imagem">
             </div>
@@ -66,7 +66,7 @@
                           'HH:mm'}}</small>
                       </div>
                     </div>
-                    <small class="mt-3">{{item.tema.descricao}}</small>
+                    <!-- <small class="mt-3">{{item.tema.descricao}}</small> -->
                     <p>{{item.descricao}}</p>
                     <img src="{{item.midia}}" alt="" class="img-fluid imagem">
                     <div class="row">
@@ -82,23 +82,31 @@
 
 
 <!-- Postagens por tema -->
-          <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">           
-              <div class="d-flex justify-content-center bg-white" *ngFor='let tema of listaTemas'>
-                <div class="my-3" *ngFor='let item of tema.postagem'>
-                  <div>
-                    <div class="row">
-                    <div>
-                    <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px">
+         
+          <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
+            
+            
+              <div>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="postagemTema" role="tabpanel"
+                    aria-labelledby="nav-postagemTema-tab">
+                    <div *ngFor='let tema of listaTemas'>
+                      <div *ngFor='let item of tema.postagem'>
+                    <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card">
+                      <div class="row">
+                        <div><img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px"></div>
+                        <div class="ml-3 mb-2">
+                          <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
+                          <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
+                            'HH:mm'}}</small>
+                        </div>
+                      </div>
+                      <small class="mt-3">{{tema.descricao}}</small>
+                      <p>{{item.descricao}}</p>
+                      <img src="{{item.midia}}" alt="" class="img-fluid imagem">
+                      </div>
+                      </div>
                     </div>
-                    <div class="ml-3 mb-2">
-                    <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
-                    <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
-                      'HH:mm'}}</small>
-                    </div>
-                    </div>
-                    <small>{{tema.descricao}}</small>
-                    <p>{{item.descricao}}</p>
-                    <img src="{{item.midia}}" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>

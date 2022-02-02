@@ -23,23 +23,26 @@ export class FeedComponent implements OnInit {
   idTema: number
   ativo = false
 
-  usuario: Usuario = new Usuario
+  usuario: Usuario = new Usuario()
   idUsuario = environment.id
-  
+
 
   constructor(
     private router: Router,
     private temaService: TemaService,
     private authService: AuthService,
     private postagemService: PostagemService
-    
+
   ) { }
+
+  nome = environment.nome
+  foto = environment.foto
 
   ngOnInit() {
     window.scroll (0,0)
  /* Caso de F5 (atualize a página) será informado e solicitado que o usuario entre novamente */
-    if(environment.token == ''){
-      alert('Sua Sessão Expirou, logue novamente')
+    if (environment.token == '') {
+    alert('Sua Sessão Expirou, logue novamente')
       this.router.navigate(['/entrar'])
     }
     this.authService.refreshToken()
@@ -47,43 +50,43 @@ export class FeedComponent implements OnInit {
     this.getAllPostagens()
   }
 
-  getAllTemas(){
+  getAllTemas() {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
   }
 
-  findByIdTema(){
-    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp
     })
   }
 
-  getAllPostagens(){
-    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) =>{
-    this.listaPostagens = resp
+  getAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
     })
-    }
+  }
 
-  findByIdUser(){
+  findByIdUser() {
     this.authService.getByIdUser(this.idUsuario).subscribe((resp: Usuario) => {
-    this.usuario = resp
+      this.usuario = resp
     })
-    }
+  }
 
-  publicar(){
+  publicar() {
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
     this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
-      
+      this.router.navigate(['/feed'])
     })
   }
 }
