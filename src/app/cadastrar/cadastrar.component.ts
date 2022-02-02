@@ -23,12 +23,6 @@ export class CadastrarComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
-
-    /* Caso de F5 (atualize a página) será informado e solicitado que o usuario entre novamente */
-    if(environment.token == ''){
-      alert('Sua Sessão Expirou, logue novamente')
-      this.router.navigate(['/entrar'])
-    }
   }
 
   confirmSenha(event: any){
