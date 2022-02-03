@@ -13,8 +13,9 @@
 .nova {
   background-color: #2b60e1;
   color: white;
-  border-radius: 5px !important;
+  border-radius: 3px;
   font-family: Poppins, sans-serif !important;
+  font-size: 0.9rem;
 }
 
 .nova:hover {
@@ -25,8 +26,9 @@
 .ver {
   background-color: #d3deef;
   color: #0838ae;
-  border-radius: 5px !important;
+  border-radius: 3px;
   font-family: Poppins, sans-serif !important;
+  font-size: 0.9rem;
 }
 
 .ver:hover {
@@ -64,12 +66,14 @@ label {
 
 a {
   text-decoration: none;
+  font-family: Poppins;
+  font-size: 0.9rem;
 }
 
 .menupostagens {
   color: #0f0e0c;
   font-family: Montserrat;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .menupostagens:hover {
@@ -77,31 +81,58 @@ a {
 }
 
 small {
-  color: #929292;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  color: #afafaf;
   font-family: Poppins;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
 
 p {
   font-family: Poppins;
   color: #535353;
   font-size: 0.8rem;
+  line-height: 1.8;
 }
 
-.cancelar {
-  background-color: transparent;
-  color: #c31414;
-  border-style: solid;
-  border-color: #c31414;
+.voltar {
+  background-color: #0f0e0c;
+  color: #ffffff;
+  border: none;
   border-radius: 2px;
+  font-family: Poppins;
+  font-size: 0.9rem;
+}
+
+.voltar:hover {
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+.botaolateral{
+  background-color: #202225;
+  color: white;
+  border-color: #202225;
+  border-radius: 2px;
+}
+
+.botaolateral:hover{
+  transform: scale(0.8);
+  transition: all 0.3s ease;
 }
 
 .publicar {
   background-color: #2b60e1;
   color: white;
-  border-color: #2b60e1;
   border-radius: 2px;
+  border: none;
+  font-family: Poppins;
+  font-size: 0.9rem;
+}
+
+.publicar:hover {
+  transform: scale(0.8);
+  transition: all 0.3s ease;
 }
 
 .card {
@@ -111,10 +142,6 @@ p {
 
 .imagem {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.backPub {
-  padding: 0 0 20px 200px !important;
 }
 
 .alignText {
@@ -132,22 +159,17 @@ p {
 }
 .btnSair {
   background-color: none;
-  border: 2px solid black;
-  
+  border: none;
 }
+
 .btnSair:hover {
-  background-color: #0F0E0C;
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transform: scale(0.8);
-  transition:all 0.3s ease;
-transform: scale(0.8);
-transition:all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .foto2 {
   border-radius: 100%;
-  width: 120px;
+  width: 150px;
 }
 
 .foto {
@@ -155,15 +177,17 @@ transition:all 0.3s ease;
   width: 53px;
   border-radius: 100%;
 }
-@media (max-width: 768px) {
-  .bgBranco {
-    display: none;
-  }
-  .card2 {
-    display: none;
-  }
 
-  .btn {
-    font-family: Poppins, sans-serif !important;
-  }
+.bgBranco {
+  display: none;
+}
+.card2 {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  display: none;
+  width: 16rem !important;
+}
+
+.tema {
+  color: #535353;
 }
