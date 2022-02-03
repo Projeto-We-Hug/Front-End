@@ -1,75 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap%27'); 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap%27");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap%27");
 
 .bgWeHug {
-    background-color: #2B60E1  !important;
-    padding: 120px 200px;
+  background-color: #2b60e1 !important;
+  padding: 100px 0;
 }
 
-
 .imagem {
-    transform: scale(0.7);
+  transform: scale(0.7);
+}
+
+@media (max-width: 768px) {
+  .bgWeHug {
+    padding: 50px 0 !important;
+  }
+  .imagem {
+    display: none !important;
+  }
+  .bgLeft {
+    display: none !important;
+  }
+  .bgRight {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 70px 70px !important;
+  }
 }
 
 .textMenu {
-    font-family: Poppins, sans-serif;
-    color: #4E4E4E
+  font-family: Poppins, sans-serif;
+  color: #4e4e4e;
 }
 
 .arredoLogin {
-    border: 1px solid  #EDF3FA;
-    border-radius: 10px ;
+  border-radius: 10px;
 }
 
 .bgLeft {
-    background-color:  #EDF3FA;
-    border: 1px solid  #EDF3FA;
-    border-top-left-radius: 10px ;
-    border-bottom-left-radius: 10px ;
-    padding: 90px 60px !important;
+  background-color: #edf3fa;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 60px 40px 30px !important;
 }
 
 .bgRight {
-    background-color: #FFFFFF;
-    border: 1px solid  #FFFFFF;
-    border-top-right-radius: 10px ;
-    border-bottom-right-radius: 10px ;
-    padding: 90px 60px !important;
-    font-family: Poppins, sans-serif;
+  background-color: #ffffff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 60px 40px 30px !important;
+  font-family: Poppins, sans-serif;
 }
 
 .weHugText {
-    font-family: Montserrat;
-    font-weight: Bold;
-    color: #2B60E1;
-    font-size: 20pt;
+  font-family: Montserrat;
+  font-weight: Bold;
+  color: #2b60e1;
+  font-size: 20pt;
 }
 span.weHugText {
-    color: #0F0E0C !important;
+  color: #0f0e0c !important;
 }
 
 h3 {
-    font-family: Poppins, sans-serif;
-    color: #929292;
-    font-size: 14pt;
+  font-family: Poppins, sans-serif;
+  color: #929292;
+  font-size: 14pt;
 }
 
 h2 {
-    font-family: Poppins, sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 .formText {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .btn {
-    background-color: black;
-    color: white;
-    
+  background-color: black;
+  color: white;
 }
 
-.btn:hover{
-    transform: scale(0.8);
-    transition:all 0.3s ease;
+.btn:hover {
+  transform: scale(0.8);
+  transition: all 0.3s ease;
 }
+

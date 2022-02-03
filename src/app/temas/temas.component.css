@@ -1,0 +1,30 @@
+.bg-azul{
+    background: rgb(225,235,250);
+    background: linear-gradient(180deg, rgba(225,235,250,1) 16%, rgba(249,249,249,1) 100%);
+}
+
+.botao{
+    background-color: #2B60E1;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: Montserrat;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.editar{
+    border: none;
+    background-color: none;
+    color: #0F0E0C;
+}
+
+.apagar{
+    border: none;
+    background-color: none;
+    color: #C31414;
+}
+
+.bg-claro{
+    background-color:  #EDF3FA;
+}

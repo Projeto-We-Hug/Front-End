@@ -2,27 +2,46 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
-import { Temas } from '../model/Temas';
+import { Tema } from '../model/Tema';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TemaService {
-  
 
   constructor(
     private http: HttpClient
-  ) { }
+    ) { }
 
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  getAllTemas(): Observable<Temas[]>{
-    return this.http.get<Temas[]>('https://wehug.herokuapp.com/temas', this.token)
+  refreshToken() {
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
   }
-  postTema(temas: Temas): Observable<Temas>{
-    return this.http.post<Temas>('https://wehug.herokuapp.com/temas', temas, this.token)
+
+  getAllTemas(): Observable<Tema[]>{
+    return this.http.get<Tema[]>('https://wehug.herokuapp.com/temas', this.token)
+  }
+
+  getByIdTema(id: number):Observable<Tema>{
+    return this.http.get<Tema>(`https://wehug.herokuapp.com/temas/${id}`, this.token)
+    }
+
+  postTema(tema: Tema): Observable<Tema>{
+    return this.http.post<Tema>('https://wehug.herokuapp.com/temas', tema, this.token)
+  }
+
+  putTema(tema: Tema): Observable<Tema>{
+    return this.http.put<Tema>('https://wehug.herokuapp.com/temas', tema, this.token)
+  }
+
+  deleteTema(id: number){
+    return this.http.delete(`https://wehug.herokuapp.com/temas/${id}`, this.token) 
   }
   
+
 }

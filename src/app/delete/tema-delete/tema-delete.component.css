@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap%27");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap%27");
+
+
+h1 {
+    font-family: Montserrat, sans-serif !important;
+    color: black !important;
+}
+
+.txt1{
+    font-family: Poppins, sans-serif !important;
+    color: black !important;
+}
+
+.voltar{
+    border: none;
+    background-color: #0F0E0C;
+    color: white;
+    border-radius: 2px;
+}
+
+.apagar{
+    border: none;
+    background-color: #C31414;
+    color: white;
+    border-radius: 2px;
+}
+
+.bg-azul{
+    background: rgb(225,235,250);
+    background: linear-gradient(180deg, rgba(225,235,250,1) 16%, rgba(249,249,249,1) 100%);
+}
