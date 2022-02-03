@@ -1,0 +1,4 @@
+.bg-azul{
+    background: rgb(225,235,250);
+    background: linear-gradient(180deg, rgba(225,235,250,1) 16%, rgba(249,249,249,1) 100%);
+}
