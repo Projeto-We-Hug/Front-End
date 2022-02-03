@@ -39,13 +39,14 @@ export class FeedComponent implements OnInit {
   foto = environment.foto
   id = environment.id
 
+
   ngOnInit() {
-    window.scroll (0,0)
- /* Caso de F5 (atualize a página) será informado e solicitado que o usuario entre novamente */
-    // if (environment.token == '') {
-    // alert('Sua Sessão Expirou, logue novamente')
-    //   this.router.navigate(['/entrar'])
-    // }
+    window.scroll(0, 0)
+
+    if (environment.token == '') {
+      this.router.navigate(['/entrar'])
+    }
+
     this.authService.refreshToken()
     this.getAllTemas()
     this.getAllPostagens()
@@ -55,6 +56,7 @@ export class FeedComponent implements OnInit {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
+
   }
 
   findByIdTema() {
@@ -90,6 +92,7 @@ export class FeedComponent implements OnInit {
       this.router.navigate(['/feed'])
     })
   }
+
   sair(){
     this.router.navigate(['/entrar'])
     environment.token = ''
@@ -98,4 +101,5 @@ export class FeedComponent implements OnInit {
     environment.id = 0
 
   }
+
 }
