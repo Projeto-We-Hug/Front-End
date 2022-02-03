@@ -80,6 +80,7 @@ p{
     font-family: Poppins;
     color: #535353;
     font-size: 0.8rem;
+    line-height: 1.8;
 }
 
 .cancelar{
@@ -117,3 +118,8 @@ p{
     background-color: none;
     color: #C31414;
 }
+
+.tema{
+    color:#535353;
+}
+
