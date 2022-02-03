@@ -22,6 +22,7 @@ export class CadastrarComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
+
   }
 
   confirmSenha(event: any){
@@ -39,13 +40,13 @@ export class CadastrarComponent implements OnInit {
       console.log(this.usuario.senha)
       console.log(this.confirmarSenha)
 
-      alert('As senhas estão Diferentes')
+      alert('As senhas estão diferentes, tente novamente!')
     } 
     else{
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/entrar'])
-        alert('Usuario Cadastrado com sucesso!')
+        alert('Usuario cadastrado com sucesso!')
       })
       }
     }

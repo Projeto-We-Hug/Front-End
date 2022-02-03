@@ -29,9 +29,13 @@ export class AuthService {
     return this.http.post<UsuarioLogin>('https://wehug.herokuapp.com/usuarios/logar', usuarioLogin);
   }
 
-  cadastrar(usuarios: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>('https://wehug.herokuapp.com/usuarios/cadastrar', usuarios);
+  cadastrar(usuario: Usuario): Observable<Usuario> {
+    return this.http.post<Usuario>('https://wehug.herokuapp.com/usuarios/cadastrar', usuario);
 
+  }
+
+  atualizar(usuario: Usuario): Observable<Usuario>{
+    return this.http.put<Usuario>('https://wehug.herokuapp.com/usuarios/atualizar', usuario, this.token)
   }
 
   getByIdUser(id: number): Observable<Usuario>{
