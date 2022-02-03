@@ -93,11 +93,13 @@
                           <div class="row">
                             <a [routerLink]="['/postagem-edit', item.id]" class="text-info mt-2 mr-4" href=""><i class="fas fa-edit pr-1"></i>Editar</a>
                             <a [routerLink]="['/delete-postagem', item.id]" class="text-danger" href=""><i class="fas fa-trash-alt pr-1"></i>Apagar</a>
+
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
 <!-- Fim de minhas postagens -->
 
 <!-- Postagens por tema -->  
@@ -158,6 +160,7 @@
                 placeholder="Insira aqui o link da imagem que deseja publicar">
             </div>
 
+
             <div class="form-group mt-4">
               <label for="texto"><i class="fa fa-hashtag" aria-hidden="true"></i> Escolha um tema ou <a data-dismiss="modal" routerLink="/temas" href=""> cadastre um
                   novo</a>: </label>
@@ -178,10 +181,10 @@
           </div>
           
           <div class="modal-footer mt-2">
+
             <button type="button" class="cancelar px-5 py-2" data-dismiss="modal">Cancelar</button>
             <button type="button" class="publicar px-5 py-2" (click)='publicar()' data-dismiss="modal">Publicar</button>
           </div>
         </div>
       </div>
     </div>
-</div>

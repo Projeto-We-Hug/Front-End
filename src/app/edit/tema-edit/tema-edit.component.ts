@@ -26,6 +26,7 @@ export class TemaEditComponent implements OnInit {
 
     if(environment.token == ''){
       alert('Sua Sessão Expirou, logue novamente')
+
       this.router.navigate(['/entrar'])
     }
     this.authService.refreshToken()
