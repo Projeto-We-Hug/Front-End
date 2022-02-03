@@ -23,7 +23,7 @@ export class MenulogadoComponent implements OnInit {
   }
 
   sair(){
-    this.router.navigate(['/entrar'])
+    this.router.navigate(['/inicio'])
     environment.token = ''
     environment.nome = ''
     environment.foto = ''

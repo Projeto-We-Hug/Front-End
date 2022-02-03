@@ -29,13 +29,12 @@ export class PostagemEditComponent implements OnInit {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      alert('Sua Sessão Expirou, logue novamente')
+      alert('Sua sessão expirou. Logue novamente')
       this.router.navigate(['/entrar'])
     }
   this.postagemService.refreshToken()
   this.temaService.refreshToken()
 
- 
     let id = this.route.snapshot.params['id']
     this.findByIdPostagem(id)
     this.findAllTemas()
@@ -66,7 +65,7 @@ export class PostagemEditComponent implements OnInit {
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem atualizada com sucesso!')
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/feed'])
     })
   }
   

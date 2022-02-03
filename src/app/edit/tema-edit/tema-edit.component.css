@@ -16,3 +16,12 @@
     color: white;
     border-radius: 2px;
 }
+
+
+label{
+    font-family: Montserrat;
+}
+
+input{
+    font-family: Poppins;
+}

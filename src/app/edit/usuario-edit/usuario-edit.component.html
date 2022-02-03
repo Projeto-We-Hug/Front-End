@@ -1,57 +1,57 @@
-<div class="container ">
-    <div class="row my-4">
-        <div class="col-md-12 d-flex justify-content-center">
-            <h1 class="text-center text-dark pt-3">Atualizar meu usuário</h1>
-
-        </div>
-    </div>
-    <div class="col-md-12 d-block justify-content-center p-0">     
-
-        <div class="form-group">
-            <label for="usuario">Nome</label>
-            <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome"
-            placeholder="Digite aqui o seu Nome">
-        </div>
-
-        <div class="form-group">
-            <label for="usuario">E-mail</label>
-            <input [(ngModel)]="usuario.usuario" class="form-control" type="text" name="usuario" id="usuario"
-            placeholder="Digite aqui o seu e-mail">
-        </div>
-
-        <div class="form-group">
-            <label for="foto">Link da Foto</label>
-            <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
-            placeholder="Digite aqui o link da sua foto">
-        </div>
+    <div class="container-fluid bg-azul mt-0 pb-5">
+        <div class="d-flex justify-content-center"><img src="{{usuario.foto}}" alt="" class="foto"></div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center pt-5">{{usuario.nome}}</h1>
+                <p class="text-center mb-5">{{usuario.usuario}}</p>
+    
+                <div class="form-group">
+                    <label for="usuario">Nome</label>
+                    <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome"
+                    placeholder="Digite aqui o seu Nome">
+                </div>
         
-        <div class="form-group d-flex justify-content-center">    
-            <div class="col-md-6 p-0 pr-1">
-                <label for="senha">Senha</label>
-                <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha"
-                placeholder="Digite aqui a sua senha">
-            </div>
-            
-            <div class="col-md-6 p-0 pl-1">
-                <label for="confirmSenha">Confirmar Senha</label>
-                <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="senha" id="senha"
-            placeholder="Confirme aqui sua senha">
-            </div>
-        </div>             
-
-        <div class="form-group mb-4">
-            <label for="tipo">Tipo de Usuário</label>
-            <select class ="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
-                <option>Selecione um tipo de usuário:</option>
-                <option value="normal">Normal</option>
-                <option value="adm">Administrador</option>
-            </select>
-        </div>
+                <div class="form-group">
+                    <label for="usuario">E-mail</label>
+                    <input [(ngModel)]="usuario.usuario" class="form-control" type="text" name="usuario" id="usuario"
+                    placeholder="Digite aqui o seu e-mail">
+                </div>
         
-        <div class="d-flex flex-row-reverse mb-4">
-            <button type="submit" class="btn btn-success ml-4 w-100" (click)="atualizar()"><i class="fas fa-check pr-2"></i>Atualizar</button>
-            <button type="submit" class="btn btn-danger w-100" routerLink='/feed'><i class="far fa-times-circle pr-2"></i>Cancelar</button>                    
+                <div class="form-group">
+                    <label for="foto">Link da Foto</label>
+                    <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
+                    placeholder="Digite aqui o link da sua foto">
+                </div>
+                
+                <div class="form-group d-flex justify-content-center">    
+                    <div class="col-md-6 p-0 pr-1">
+                        <label for="senha">Senha</label>
+                        <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha"
+                        placeholder="Digite aqui a sua senha">
+                    </div>
+                    
+                    <div class="col-md-6 p-0 pl-1">
+                        <label for="confirmSenha">Confirmar senha</label>
+                        <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="senha" id="senha"
+                    placeholder="Confirme aqui sua senha">
+                    </div>
+                </div>             
+        
+                <div class="form-group mb-4">
+                    <label for="tipo">Tipo de usuário</label>
+                    <select class ="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
+                        <option>Selecione um tipo de usuário:</option>
+                        <option value="normal">Normal</option>
+                        <option value="adm">Administrador</option>
+                    </select>
+                </div>
+                
+                <div class="d-flex flex-row mb-4 justify-content-end py-5">
+                    <button type="submit" class="voltar px-5 py-2 f-montserrat" routerLink='/feed'><i class="far fa-times-circle pr-2"></i>Voltar</button>                    
+                    <button type="submit" class="atualizar px-5 py-2 ml-3 f-montserrat" (click)="atualizar()"><i class="fas fa-check pr-2"></i>Atualizar</button>
+                </div>
+            </div>
         </div>
-
-   
+    
+    
     </div>
