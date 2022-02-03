@@ -1,139 +1,169 @@
-.bg-azul{
-    background: rgb(225,235,250);
-    background: linear-gradient(180deg, rgba(225,235,250,1) 16%, rgba(249,249,249,1) 100%);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+.bg-azul {
+  background: rgb(225, 235, 250);
+  background: linear-gradient(
+    180deg,
+    rgba(225, 235, 250, 1) 16%,
+    rgba(249, 249, 249, 1) 100%
+  );
 }
 
-.nova{
-    background-color: #2B60E1;
-    border-style: none;
-    color: white;
-    border-radius: 2px;
+.nova {
+  background-color: #2b60e1;
+  color: white;
+  border-radius: 5px !important;
+  font-family: Poppins, sans-serif !important;
 }
 
-.nova:hover{
-    background-color: #7193e9;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.nova:hover {
+  background-color: #7193e9;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.ver{
-    background-color: #D3DEEF;
-    border-style: none;
-    color: #0838AE;
-    border-radius: 2px;
+.ver {
+  background-color: #d3deef;
+  color: #0838ae;
+  border-radius: 5px !important;
+  font-family: Poppins, sans-serif !important;
 }
 
-.ver:hover{
-    background-color: #bccde7;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.ver:hover {
+  background-color: #bccde7;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.fa{
-    font-size: 1rem;
+.fa {
+  font-size: 1rem;
 }
 
-h1{
-    font-size: 1.5rem;
-    color: #202225;
-    font-family: Montserrat;
-    font-weight: bold;
+h1 {
+  font-size: 1.5rem;
+  color: #202225;
+  font-family: Montserrat;
+  font-weight: bold;
 }
 
-h4{
-    font-size: 1.2rem;
-    color: #202225;
-    font-family: Montserrat;
+h4 {
+  font-size: 1.2rem;
+  color: #202225;
+  font-family: Montserrat;
 }
 
-h5{
-    font-size: 1rem;
-    color: #0F0E0C;
-    font-family: Montserrat;
+h5 {
+  font-size: 1rem;
+  color: #0f0e0c;
+  font-family: Montserrat;
 }
 
-label{
-    font-family: Montserrat;
-    color: #0F0E0C;
+label {
+  font-family: Montserrat;
+  color: #0f0e0c;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-input{
-    font-family: Montserrat;
+.menupostagens {
+  color: #0f0e0c;
+  font-family: Montserrat;
+  font-size: 1rem;
 }
 
-textarea{
-    font-family: Montserrat;
+.menupostagens:hover {
+  color: #535353;
 }
 
-option{
-    font-family: Montserrat;
-
+small {
+  color: #929292;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: Poppins;
 }
 
-.menupostagens{
-    color: #0F0E0C;
-    font-family: Montserrat;
-    font-size: 1rem;
+p {
+  font-family: Poppins;
+  color: #535353;
+  font-size: 0.8rem;
 }
 
-.menupostagens:hover{
-    color: #535353;
+.cancelar {
+  background-color: transparent;
+  color: #c31414;
+  border-style: solid;
+  border-color: #c31414;
+  border-radius: 2px;
 }
 
-small{
-    color: #929292;
-    font-family: Poppins;
-    font-size: 1rem;
-    letter-spacing: 3px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
+.publicar {
+  background-color: #2b60e1;
+  color: white;
+  border-color: #2b60e1;
+  border-radius: 2px;
 }
 
-p{
-    font-family: Poppins;
-    color: #535353;
-    font-size: 0.8rem;
-    line-height: 1.8;
+.card {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
-.cancelar{
-    background-color: transparent;
-    color: #C31414;
-    border-style: solid;
-    border-color: #C31414;
-    border-radius: 2px;
+.imagem {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.publicar{
-    background-color: #2B60E1;
-    color: white;
-    border-color: #2B60E1;
-    border-radius: 2px;
+.backPub {
+  padding: 0 0 20px 200px !important;
 }
 
-.card{
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+.alignText {
+  margin-left: 15px;
+  padding-top: 7px;
 }
 
-.imagem{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+/* ------------- Menu Lateral Esquerdo ------------- */
+
+.bgBranco {
+  background-color: white !important;
+  border-radius: 10px !important;
+  margin: 20px 20px 0 !important;
+  padding: 10px 10px !important;
+}
+.btnSair {
+  background-color: none;
+  border: 2px solid black;
+  
+}
+.btnSair:hover {
+  background-color: #0F0E0C;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: scale(0.8);
+  transition:all 0.3s ease;
+transform: scale(0.8);
+transition:all 0.3s ease;
 }
 
-.editar{
-    border: none;
-    background-color: none;
-    color: #0F0E0C;
+.foto2 {
+  border-radius: 100%;
+  width: 120px;
 }
 
-.apagar{
-    border: none;
-    background-color: none;
-    color: #C31414;
+.foto {
+  height: 53px;
+  width: 53px;
+  border-radius: 100%;
 }
+@media (max-width: 768px) {
+  .bgBranco {
+    display: none;
+  }
+  .card2 {
+    display: none;
+  }
 
-.tema{
-    color:#535353;
-}
+  .btn {
+    font-family: Poppins, sans-serif !important;
+  }
+

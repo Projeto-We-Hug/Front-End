@@ -37,6 +37,8 @@ export class FeedComponent implements OnInit {
 
   nome = environment.nome
   foto = environment.foto
+  id = environment.id
+
 
   ngOnInit() {
     window.scroll(0, 0)
@@ -44,6 +46,7 @@ export class FeedComponent implements OnInit {
     if (environment.token == '') {
       this.router.navigate(['/entrar'])
     }
+
     this.authService.refreshToken()
     this.getAllTemas()
     this.getAllPostagens()
@@ -53,6 +56,7 @@ export class FeedComponent implements OnInit {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
+
   }
 
   findByIdTema() {
@@ -88,4 +92,14 @@ export class FeedComponent implements OnInit {
       this.router.navigate(['/feed'])
     })
   }
+
+  sair(){
+    this.router.navigate(['/entrar'])
+    environment.token = ''
+    environment.nome = ''
+    environment.foto = ''
+    environment.id = 0
+
+  }
+
 }

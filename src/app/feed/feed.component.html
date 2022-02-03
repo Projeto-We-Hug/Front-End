@@ -1,159 +1,140 @@
-<div class="container-fluid bg-azul mt-0">
+<div class="container-fluid bg-azul mt-0 p-0">
+<div class="row"> 
+    
+<!-- Menu de edição de usuário -->
+ <div class="col-md-2 d-flex justify-content-center pt-5 p-0">
+  <div class="card card2 d-flex align-items-center justify-content-center" style="width: 16rem; height: 28rem !important; ">
+    <img src="{{foto}}" class="card-img-top foto2 pt-2" alt=" ">
+    <div class="card-body">
+      <h5 class="card-title text-center">{{nome}}</h5>
+<hr class="py-1">
+      <a href="#nav-minhasPostagens-tab" class="btn btn-primary mb-3 w-100"><i class="fas fa-smile-beam pr-1"></i>Minhas Postagens</a>
+      <a href="#" class="btn btn-primary mb-3 w-100" [routerLink]="['/usuario-edit', id]"><i class="fas fa-user-edit pr-1"></i> Editar Perfil</a>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-hands-helping pr-1"></i>Links úteis
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="https://mdh.metasix.solutions/portal/servicos/informacao?t=50&servico=233" target="_blank">Delegacia da Mulher</a>
+          <a class="dropdown-item" href="https://www.cvv.org.br/" target="_blank">Centro de Valorização da Vida - CVV</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <hr>
+      <a href="#" class="btn btnSair w-100" (click)='sair()'><i class="fas fa-sign-out-alt pr-1"></i>Sair</a>
+    </div>
+  </div>
+ </div>
+ <!-- /Menu de edição de usuário -->
 
-  <div class="container mt-0">
+<div class="col-md-8"> 
 
 <!-- H1 e botões de ver e fazer nova postagem -->
-    <h1 class="pt-5 pb-5">Publicações</h1>
-    <div class="row mb-5 justify-content-start">
-      <a class="nova px-5 py-2 mr-2" data-toggle="modal" data-target="#novaPostagem"><i class="fa fa-plus"
-          aria-hidden="true"></i> Nova postagem</a>
-      <a href="#postagens" class="ver px-5 py-2 ml-2">Ver postagens</a>
+<div class="col-md-8"> 
+  <div class="backPub row d-flex flex-column align-items-start justify-content-start">
+    <h1 class="py-3">Publicações</h1>
+    <div class="d-flex flex-row justify-content-start">
+      <a class="nova btn mr-2" data-toggle="modal" data-target="#novaPostagem"><i class="fas fa-plus pr-2"></i>Nova postagem</a>
+      <a class="ver btn" href="#postagens"><i class="fas fa-list-ul pr-2"></i>Ver postagens</a>
     </div>
+  </div>
+</div>
 <!-- Fim do H1 e botões de ver e fazer nova postagem -->
 
-
 <!-- Barra de navegação de postagens -->
-    <div class="mt-5 pt-5" id="postagens">
-      <nav class="d-flex justify-content-start">
-        <div class="nav nav-tabs mb-5" id="nav-tab" role="tablist">
-
+    <div class="pt-5" id="postagens">
+      <nav>
+        <div class="d-flex justify-content-center nav nav-tabs mb-5" id="nav-tab" role="tablist">
           <a (click)='getAllPostagens()' class="pr-5 menupostagens" id="nav-todasPostagens-tab" data-toggle="tab"
-            href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens
-          </a>
-
-          <a (click)='findByIdUser()' class="pr-5 menupostagens" id="nav-minhasPostagens-tab" data-toggle="tab"
-            href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
-            postagens
-          </a>
-
-          <a class="pr-5 menupostagens" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab"
-            aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema
-          </a>
-
+            href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens</a>
+          <a (click)='findByIdUser()' class="pr-5 menupostagens" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas postagens</a>
+          <a class="menupostagens" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema</a>
         </div>
       </nav>
+      </div>
 <!-- Fim da barra de navegação de postagens -->
 
-<div class="container col-md-8 pb-5">
+<div class="row mx-0 mb-3 d-flex justify-content-center"> 
+<div class="col-md-8 mb-3 mx-0 p-0">
 
 <!-- Todas as postagens -->
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
-            aria-labelledby="nav-todasPostagens-tab">
-
-            <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card"
-              *ngFor='let item of listaPostagens'>
-              <div class="row">
-                <div><img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px"></div>
-                <div class="ml-3 mb-2">
+        <div class="tab-content d-flex justify-content-center" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+            <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card"  *ngFor='let item of listaPostagens'>
+              <div class="row">                
+                  <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px">  
+                <div class="alignText">
                   <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
-                  <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
-                    'HH:mm'}}</small>
+                  <small class="text-muted"><i class="fas fa-calendar-alt pr-1"></i>{{item.data | date: 'dd/MM/yyyy'}}<i class="fas fa-clock pr-1 pl-2"></i>{{item.data | date: 'HH:mm'}}</small>
                 </div>
               </div>
-              <small class="mt-3 font-weight-bold tema">{{item.tema.descricao}}</small>
+              <small class="text-muted mt-3"><i class="fas fa-list-ul pr-2"></i>{{item.tema.descricao}}</small>
               <p>{{item.descricao}}</p>
               <img src="{{item.midia}}" alt="" class="img-fluid imagem">
-              <small class="mt-3">#{{item.tema.topicoPrincipal}} #{{item.tema.subTopicos}}</small>
             </div>
-          </div>
+          </div>     
 <!-- Fim de todas as postagens -->
 
-
 <!-- Minhas postagens -->
-          <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-
-            <div>
+          <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">         
               <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="minhasPostagens" role="tabpanel"
-                  aria-labelledby="nav-todasPostagens-tab">
-
-                  <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card"
-                    *ngFor='let item of usuario.postagem'>
+                <div class="tab-pane fade show active" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+                  <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card" *ngFor='let item of usuario.postagem'>
                     <div class="row">
-                      <div><img class="rounded-circle" src={{usuario.foto}} alt="" width="50px"></div>
-                      <div class="ml-3 mb-2">
-                        <h4 class="pb-0 mb-0">{{usuario.nome}}</h4>
-                        <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
-                          'HH:mm'}}</small>
-                      </div>
+                      <img class="rounded-circle" src={{usuario.foto}} alt="" width="50px">
+                        <div class="alignText">
+                          <h4 class="pb-0 mb-0">{{usuario.nome}}</h4>
+                          <small class="text-muted"><i class="fas fa-calendar-alt pr-1"></i>{{item.data | date: 'dd/MM/yyyy'}}  <i class="fas fa-clock pr-1 pl-2"></i>{{item.data | date: 'HH:mm'}}</small>
+                        </div>
                     </div>
-                    <small class="mt-3 font-weight-bold tema">{{item.tema.descricao}}</small>
-                    <p>{{item.descricao}}</p>
-                    <img src="{{item.midia}}" alt="" class="img-fluid imagem">
-                    <small class="mt-3">#{{item.tema.topicoPrincipal}} #{{item.tema.subTopicos}}</small>
-                    <div class="row d-flex justify-content-end">
-                      <a [routerLink]="['/postagem-edit', item.id]" class="editar mr-2" href=""><i class="fas fa-edit pr-2"></i></a>
-                      <a [routerLink]="['/delete-postagem', item.id]" class="apagar" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    <small class="text-muted mt-3"><i class="fas fa-list-ul pr-2"></i>{{item.tema.descricao}}</small>                    
+                      <p>{{item.descricao}}</p>
+                        <img src="{{item.midia}}" alt="" class="img-fluid imagem">
+                          <div class="row">
+                            <a [routerLink]="['/postagem-edit', item.id]" class="text-info mt-2 mr-4" href=""><i class="fas fa-edit pr-1"></i>Editar</a>
+                            <a [routerLink]="['/delete-postagem', item.id]" class="text-danger" href=""><i class="fas fa-trash-alt pr-1"></i>Apagar</a>
+
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+
 <!-- Fim de minhas postagens -->
 
-
-<!-- Postagens por tema -->
-          <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
-            
-            
-              <div>
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="postagemTema" role="tabpanel"
-                    aria-labelledby="nav-postagemTema-tab">
-                    <div *ngFor='let tema of listaTemas'>
-                      <div *ngFor='let item of tema.postagem'>
-                    <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card">
-                      <div class="row">
-                        <div><img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px"></div>
-                        <div class="ml-3 mb-2">
-                          <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
-                          <small class="mt-1 pt-1">{{item.data | date: 'dd/MM/yyyy'}} as {{item.data | date:
-                            'HH:mm'}}</small>
-                        </div>
-                      </div>
-                      <small class="mt-3 font-weight-bold tema pb-2">{{tema.descricao}}</small>
-                      <p>{{item.descricao}}</p>
-                      <img src="{{item.midia}}" alt="" class="img-fluid imagem">
-                      <small class="mt-3">#{{tema.topicoPrincipal}} #{{tema.subTopicos}}</small>
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-
+<!-- Postagens por tema -->  
+<div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="postagemTema" role="tabpanel"
+      aria-labelledby="nav-postagemTema-tab">
+      <div *ngFor='let tema of listaTemas'>
+        <div *ngFor='let item of tema.postagem'>
+      <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card">
+        <div class="row">
+          <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px">
+          <div class="alignText">
+            <h4 class="pb-0 mb-0">{{item.usuario.nome}}</h4>
+            <small class="text-muted"><i class="fas fa-calendar-alt pr-1"></i>{{item.data | date: 'dd/MM/yyyy'}}  <i class="fas fa-clock pr-1 pl-2"></i>{{item.data | date: 'HH:mm'}}</small>
           </div>
-
-<!-- Fim de postagens por tema -->
-
-
+        </div>
+        <small class="mt-3"><i class="fas fa-list-ul pr-2"></i>{{tema.descricao}}</small>
+        <p>{{item.descricao}}</p>
+        <img src="{{item.midia}}" alt="" class="img-fluid imagem">
         </div>
       </div>
       </div>
-
-
-
+      </div>
+      </div>
       </div>
     </div>
+<!-- Fim de postagem -->
+            
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-2"></div>
 
     <!-- Modal -->
     <div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -179,6 +160,7 @@
                 placeholder="Insira aqui o link da imagem que deseja publicar">
             </div>
 
+
             <div class="form-group mt-4">
               <label for="texto"><i class="fa fa-hashtag" aria-hidden="true"></i> Escolha um tema ou <a data-dismiss="modal" routerLink="/temas" href=""> cadastre um
                   novo</a>: </label>
@@ -197,10 +179,9 @@
 
 
           </div>
-
           
+          <div class="modal-footer mt-2">
 
-          <div class="modal-footer mt-4">
             <button type="button" class="cancelar px-5 py-2" data-dismiss="modal">Cancelar</button>
             <button type="button" class="publicar px-5 py-2" (click)='publicar()' data-dismiss="modal">Publicar</button>
           </div>
