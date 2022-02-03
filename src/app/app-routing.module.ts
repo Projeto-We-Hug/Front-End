@@ -11,6 +11,7 @@ import { TemasComponent } from './temas/temas.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'delete-postagem/:id', component: DeletePostagemComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
-  {path: 'tema-delete/:id', component: TemaDeleteComponent}
+  {path: 'tema-delete/:id', component: TemaDeleteComponent},
+  {path: 'usuario-edit/:id', component: UsuarioEditComponent},
 ];
 
 @NgModule({

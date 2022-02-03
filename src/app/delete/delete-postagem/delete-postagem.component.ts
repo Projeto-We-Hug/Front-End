@@ -30,7 +30,6 @@ export class DeletePostagemComponent implements OnInit {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      alert('Sua Sessão Expirou, logue novamente')
       this.router.navigate(['/entrar'])
     }
 

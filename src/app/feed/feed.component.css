@@ -59,6 +59,19 @@ a{
     text-decoration: none;
 }
 
+input{
+    font-family: Montserrat;
+}
+
+textarea{
+    font-family: Montserrat;
+}
+
+option{
+    font-family: Montserrat;
+
+}
+
 .menupostagens{
     color: #0F0E0C;
     font-family: Montserrat;
@@ -71,9 +84,11 @@ a{
 
 small{
     color: #929292;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
     font-family: Poppins;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
 }
 
 p{
@@ -122,4 +137,3 @@ p{
 .tema{
     color:#535353;
 }
-
