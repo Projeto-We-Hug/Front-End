@@ -2,13 +2,14 @@
 <div class="row"> 
     
 <!-- Menu de edição de usuário -->
- <div class="col-md-2 d-flex justify-content-center pt-5 p-0">
+<div class="col-md-2 d-flex justify-content-center pt-5 p-0">
+   <div class="sticky-top pt-2">
   <div class="card card2 d-flex align-items-center justify-content-center" style="width: 16rem; height: 28rem !important; ">
     <img src="{{foto}}" class="card-img-top foto2 pt-2" alt=" ">
     <div class="card-body">
       <h5 class="card-title text-center">{{nome}}</h5>
 <hr class="py-1">
-      <a href="#nav-minhasPostagens-tab" class="btn btn-primary mb-3 w-100"><i class="fas fa-smile-beam pr-1"></i>Minhas Postagens</a>
+ <a (click)='findByIdUser()' class="btn btn-primary w-100 mb-3"  id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false"><i class="fas fa-smile-beam pr-1"></i>Minhas Postagens</a>
       <a href="#" class="btn btn-primary mb-3 w-100" [routerLink]="['/usuario-edit', id]"><i class="fas fa-user-edit pr-1"></i> Editar Perfil</a>
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
@@ -25,6 +26,7 @@
     </div>
   </div>
  </div>
+</div>
  <!-- /Menu de edição de usuário -->
 
 <div class="col-md-8"> 
