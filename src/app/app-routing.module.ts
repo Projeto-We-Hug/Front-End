@@ -11,6 +11,7 @@ import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { TemasComponent } from './temas/temas.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
