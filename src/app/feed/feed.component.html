@@ -77,7 +77,7 @@
             <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
               aria-labelledby="nav-todasPostagens-tab">
               <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card"
-                *ngFor='let item of listaPostagens'>
+                *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                 <div class="row">
                   <img class="rounded-circle" src={{item.usuario.foto}} alt="" width="50px" height="50px">
                   <div class="alignText">
@@ -100,7 +100,7 @@
                 <div class="tab-pane fade show active" id="minhasPostagens" role="tabpanel"
                   aria-labelledby="nav-todasPostagens-tab">
                   <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card"
-                    *ngFor='let item of usuario.postagem'>
+                    *ngFor='let item of usuario.postagem | orderBy : key : reverse'>
                     <div class="row">
                       <img class="rounded-circle" src={{usuario.foto}} alt="" width="50px">
                       <div class="alignText">
@@ -132,7 +132,7 @@
               <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="postagemTema" role="tabpanel"
                   aria-labelledby="nav-postagemTema-tab">
-                  <div *ngFor='let tema of listaTemas'>
+                  <div *ngFor='let tema of listaTemas | orderBy : key : reverse'>
                     <div *ngFor='let item of tema.postagem'>
                       <div class="flex-column mt-3 bg-white d-flex justify-content-center p-5 card">
                         <div class="row">

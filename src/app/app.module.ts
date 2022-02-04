@@ -22,6 +22,7 @@ import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ModalModule } from 'ngx-bootstrap';
     HttpClientModule,
     FormsModule,
     ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,
