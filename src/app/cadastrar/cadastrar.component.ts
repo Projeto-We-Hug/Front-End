@@ -33,6 +33,10 @@ export class CadastrarComponent implements OnInit {
     this.tipoUsuarios = event.target.value
   }
 
+  usuarioExistente(event: any){
+    this.usuario = event.target.value
+  }
+
   cadastrar(){
     this.usuario.tipo = this.tipoUsuarios
 
@@ -49,5 +53,8 @@ export class CadastrarComponent implements OnInit {
         alert('Usuario cadastrado com sucesso!')
       })
       }
+    if(this.usuarioExistente == this.usuarioExistente){
+      alert('Esse e-mail já foi cadastrado anteriormente.')
+    }
     }
   }
