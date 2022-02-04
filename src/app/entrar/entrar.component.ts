@@ -35,11 +35,12 @@ export class EntrarComponent implements OnInit {
 
       this.router.navigate(['/feed'])
     }, erro =>{
-      if(erro.status == 500){
-        this.alertas.showAlertDanger('Usuario ou senha estão incorretos!')
+      if(erro.status == 401){
+        alert('Usuario ou senha estão incorretos!')
       }
     } )
   }
 }
+
 
 
