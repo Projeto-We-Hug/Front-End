@@ -49,7 +49,7 @@ export class UsuarioEditComponent implements OnInit {
     this.usuario.tipo = this.tipoUsua
     
     if(this.usuario.senha != this.confirmarSenha){
-      alert('As senhas estão divergentes. Tente novamente!')
+      this.alertas.showAlertDanger('As senhas estão divergentes. Tente novamente!')
     } else {
       /*Pega os valores inseridos na variável user,
       transforma em Json para que o Backend entenda a requisição*/

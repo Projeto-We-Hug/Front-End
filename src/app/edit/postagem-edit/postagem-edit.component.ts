@@ -31,7 +31,7 @@ export class PostagemEditComponent implements OnInit {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      alert('Sua sessão expirou. Logue novamente')
+      this.alertas.showAlertInfo('Sua sessão expirou, logue novamente!')
       this.router.navigate(['/entrar'])
     }
   this.postagemService.refreshToken()

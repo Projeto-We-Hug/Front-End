@@ -25,7 +25,7 @@ export class TemasComponent implements OnInit {
     window.scroll(0,0)
    /* Caso de F5 (atualize a página) será informado e solicitado que o usuario entre novamente */
         if (environment.token == '') {
-          this.alertas.showAlertInfo('Sua Sessão Expirou, logue novamente')
+          this.alertas.showAlertInfo('Sua sessão expirou, logue novamente!')
           this.router.navigate(['/entrar'])
         } 
         this.findAllTemas()

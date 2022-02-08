@@ -46,7 +46,7 @@ export class CadastrarComponent implements OnInit {
       console.log(this.usuario.senha)
       console.log(this.confirmarSenha)
 
-      alert('As senhas estão diferentes, tente novamente!')
+      this.alertas.showAlertDanger('As senhas estão diferentes, tente novamente!')
     } 
     else{
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
@@ -56,7 +56,7 @@ export class CadastrarComponent implements OnInit {
       })
       }
     if(this.usuarioExistente == this.usuarioExistente){
-      alert('Esse e-mail já foi cadastrado anteriormente.')
+      this.alertas.showAlertDanger('Esse e-mail já foi cadastrado anteriormente.')
     }
     }
   }
