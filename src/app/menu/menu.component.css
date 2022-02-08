@@ -48,4 +48,36 @@
     font-family: Poppins;
 }
 
+.fa{
+    font-size: 2rem;
+    color: #2d60e1;
+}
 
+.dropdown-menu{
+    background-color: white;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 0;
+}
+
+.dropdown-item{
+    padding: 1rem 0;
+}
+
+.dropdown-item:hover{
+    background-color:#2d60e1;
+    color: white;
+    margin: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .dropleft{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu{
+        display: none;
+    }
+}
