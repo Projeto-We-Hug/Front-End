@@ -73,3 +73,32 @@
     transition:all 0.3s ease;
 }
 
+
+@media screen and (max-width: 700px) {
+    .nav-link{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .dropleft{
+        display: none;
+    }
+}
+
+.dropdown-menu{
+    background-color: white;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 0;
+}
+
+.dropdown-item{
+    padding: 1rem 0;
+}
+
+.dropdown-item:hover{
+    background-color:#2d60e1;
+    color: white;
+    margin: 0;
+}
