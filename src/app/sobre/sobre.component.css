@@ -16,6 +16,7 @@ h4 {
 
 .bg-azul{
     background-color: #2B60E1;
+    min-height: 500px;
 }
 
 .links{
@@ -91,6 +92,11 @@ img {
 
 .fa:hover {
     color: #202225
+}
+
+.video{
+    min-height: 470px;
+    max-width: 840px;
 }
 
 #mayq:hover {
