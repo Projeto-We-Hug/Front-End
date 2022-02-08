@@ -1,15 +1,39 @@
 <div class="container-fluid pb-3 pt-3">
 
     <nav class="navbar navbar-light row justify-content-between m-0">
+
+    <!-- Logo -->
         <div class="ml-2">
             <a class="navbar-brand text-preto hug" href="#"><span class="we">we</span>hug</a> 
         </div>
-        <div class="mr-2 row">
+    <!-- Fim do logo -->
+
+
+    <!-- Menu hamburguer -->
+    <div class="dropleft">
+    <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item text-preto pr-4 pl-4" href="#sobre">Projeto</a>
+        <a class="dropdown-item text-preto pr-4 pl-4" href="#sobrenos">Equipe</a>
+        <a class="dropdown-item text-preto pr-4 pl-4" routerLink="/entrar">Entrar</a>
+        <a class="dropdown-item text-preto pr-4 pl-4" routerLink="/cadastro">Cadastrar</a>
+    </div>
+    </div>
+    <!-- Fim de menu hamburguer -->
+
+
+    <!-- Menu -->
+        <div class="mr-2 row menu">
             <a class="nav-link mr-2 text-preto pr-4 pl-4 entrar" href="#sobre">Projeto</a>
             <a class="nav-link mr-2 text-preto pr-4 pl-4 entrar" href="#sobrenos">Equipe</a>
             <a class="nav-link mr-2 text-preto pr-4 pl-4 entrar" routerLink="/entrar">Entrar</a>
             <a class="nav-link rounded ml-2 botao text-preto pr-4 pl-4" routerLink="/cadastro">Cadastrar</a>
         </div>
+    <!-- Fim do menu -->
+
+
     </nav>
 
 </div>
