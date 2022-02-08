@@ -245,6 +245,7 @@ p {
 
   .posts{
     padding: 3rem;
+    min-width: 100vw;
   }
 
   .col-md-8{
