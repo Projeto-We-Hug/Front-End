@@ -16,6 +16,8 @@
   border-radius: 3px;
   font-family: Poppins, sans-serif !important;
   font-size: 0.9rem;
+  margin-right: 1rem;
+  padding: 2 1rem;
 }
 
 .nova:hover {
@@ -29,6 +31,8 @@
   border-radius: 3px;
   font-family: Poppins, sans-serif !important;
   font-size: 0.9rem;
+  margin-right: 1rem;
+  padding: 2 1rem;
 }
 
 .ver:hover {
@@ -149,6 +153,40 @@ p {
   padding-top: 7px;
 }
 
+.fa-bars{
+  color: #202225;
+}
+
+.dropdown-menu{
+  background-color: white;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 0;
+}
+
+.dropdown-item{
+  padding: 1rem 2rem;
+}
+
+.dropdown-item:hover{
+  background-color:#2d60e1;
+  color: white;
+  margin: 0;
+}
+
+.posts{
+  padding: 3rem;
+}
+
+.col-md-8{
+  margin: 0 3rem;
+  padding: 0 3rem;
+}
+
+.menumobile{
+  margin: 0 3rem;
+}
+
 /* ------------- Menu Lateral Esquerdo ------------- */
 
 .bgBranco {
@@ -181,13 +219,53 @@ p {
 .bgBranco {
   display: none;
 }
-.card2 {
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-  display: none;
+.usuario {
   width: 16rem !important;
 }
 
 .tema {
   color: #535353;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .colusuario{
+    display: none !important;
+  }
+
+  .desktop{
+    display: none;
+  }
+
+  .nova, .ver{
+    margin-right: 0.5rem;
+  }
+
+  .posts{
+    padding: 3rem;
+  }
+
+  .col-md-8{
+    margin: 0;
+    padding: 0;
+    min-width: 80vw;
+  }
+
+  .publicacoes{
+    margin: 0 3rem;
+  }
+  
+
+}
+
+@media screen and (min-width: 1000px) {
+  .dropleft{
+    display: none;
+  }
+
+  .mobile{
+    display: none;
+  }
 }

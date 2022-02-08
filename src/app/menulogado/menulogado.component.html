@@ -1,14 +1,39 @@
-<div class="container col-md-12 pb-3 pt-3 bg-azul">
+<div class="container-fluid py-3 bg-azul">
 
     <nav class="navbar navbar-light row justify-content-between m-0">
+
+        <!-- Logo -->
         <div class="ml-2">
             <a class="navbar-brand text-preto hug" routerLink="/feed"><span class="we">we</span>hug</a> 
         </div>
+        <!-- Fim do logo -->
+
+        <!-- Menu -->
         <div class="row align-items-center">
-            <a class="nav-link" [routerLink]="['/usuario-edit', id]"><img src="{{foto}}" alt="" class="foto"></a>
+            <a class="nav-link" [routerLink]="['/usuario-edit', id]"><img src="{{foto}}" alt="Perfil" class="foto"></a>
             <a class="nav-link" routerLink="/feed"><i class="fa fa-home" aria-hidden="true"></i></a>
             <a class="nav-link" (click)='sair()'><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+
+        <!-- Menu hamburguer (visível em mobile) -->
+        <div class="dropleft">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="{{foto}}" alt="Menu" class="foto">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item text-preto pr-4 pl-4" routerLink="/feed">Início</a>
+                <a class="dropdown-item text-preto pr-4 pl-4" [routerLink]="['/usuario-edit', id]">Meu perfil</a>
+                <a class="dropdown-item text-preto pr-4 pl-4" (click)='sair()'>Sair</a>
+            </div>
         </div>
+        <!-- Fim de menu hamburguer -->
+
+        </div>
+        <!-- Fim do menu -->
+
+
     </nav>
 
 </div>
+
+
+
