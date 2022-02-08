@@ -24,7 +24,7 @@ export class TemaDeleteComponent implements OnInit {
 
   ngOnInit() {
     if(environment.token == ''){
-    alert('Sua Sessão Expirou, logue novamente')
+    this.alertas.showAlertInfo('Sua sessão expirou, logue novamente!')
     this.router.navigate(['/entrar'])
     }
     
